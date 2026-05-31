@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>施工実績 | 株式会社九州建設テクノロジー</title>
+  <meta name="description" content="九州建設テクノロジーの施工実績。建築・土木・電気・管工事の代表的なプロジェクトをご紹介します。">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="subpage.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot"  id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- HEADER -->
+  <header class="header scrolled" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-mark"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="22" width="32" height="5" rx="1" fill="white"/><rect x="8" y="10" width="4" height="12" rx="1" fill="white"/><rect x="28" y="10" width="4" height="12" rx="1" fill="white"/><rect x="4" y="7" width="32" height="5" rx="1" fill="#f59e0b"/><rect x="16" y="17" width="8" height="5" rx="1" fill="#93c5fd"/></svg></div>
+        <div class="logo-text"><span class="logo-main">九州建設テクノロジー</span><span class="logo-sub">KYUSHU CONSTRUCTION TECHNOLOGY</span></div>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="services.html">事業内容</a></li>
+          <li><a href="works.html" class="active-page">施工実績</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニュー"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-media">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=85&fit=crop" alt="施工実績" id="heroImg">
+      <div class="page-hero-overlay"></div>
+    </div>
+    <div class="page-hero-body">
+      <p class="label-tag">WORKS</p>
+      <h1>施工実績</h1>
+      <p>創業から20年、500件を超える施工管理実績。代表的なプロジェクトをご紹介します。</p>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="index.html">ホーム</a><span>›</span><span class="current">施工実績</span>
+    </div>
+  </div>
+
+  <!-- 実績サマリー -->
+  <section style="background:var(--navy); padding:56px 0;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; text-align:center;">
+        <div style="padding:20px; border-right:1px solid rgba(255,255,255,.1);">
+          <div style="font-family:var(--font-en);font-size:3rem;font-weight:900;color:var(--white);line-height:1;">500<span style="font-size:1.4rem;color:var(--gold);">+</span></div>
+          <div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:8px;letter-spacing:.06em;">総施工管理実績</div>
+        </div>
+        <div style="padding:20px; border-right:1px solid rgba(255,255,255,.1);">
+          <div style="font-family:var(--font-en);font-size:3rem;font-weight:900;color:var(--white);line-height:1;">7<span style="font-size:1.4rem;color:var(--gold);">県</span></div>
+          <div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:8px;letter-spacing:.06em;">対応エリア（九州全域）</div>
+        </div>
+        <div style="padding:20px; border-right:1px solid rgba(255,255,255,.1);">
+          <div style="font-family:var(--font-en);font-size:3rem;font-weight:900;color:var(--white);line-height:1;">98<span style="font-size:1.4rem;color:var(--gold);">%</span></div>
+          <div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:8px;letter-spacing:.06em;">工期遵守率</div>
+        </div>
+        <div style="padding:20px;">
+          <div style="font-family:var(--font-en);font-size:3rem;font-weight:900;color:var(--white);line-height:1;">20<span style="font-size:1.4rem;color:var(--gold);">年</span></div>
+          <div style="font-size:13px;color:rgba(255,255,255,.55);margin-top:8px;letter-spacing:.06em;">業界経験</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 施工実績一覧 -->
+  <section class="page-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="label-tag label-tag--center">WORKS LIST</p>
+        <h2 class="section-title tc">プロジェクト一覧</h2>
+        <div class="section-divider section-divider--center"></div>
+      </div>
+
+      <!-- フィルター -->
+      <div class="works-filter reveal">
+        <button class="filter-btn active" data-filter="all">すべて</button>
+        <button class="filter-btn" data-filter="建築">建築</button>
+        <button class="filter-btn" data-filter="土木">土木</button>
+        <button class="filter-btn" data-filter="電気">電気</button>
+        <button class="filter-btn" data-filter="管工事">管工事</button>
+      </div>
+
+      <!-- Works Grid -->
+      <div class="works-full-grid" id="worksGrid">
+
+        <div class="work-full-card reveal" data-cat="建築">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80&fit=crop" alt="大型商業施設" loading="lazy">
+            <span class="wfc-cat">建築</span>
+          </div>
+          <div class="wfc-body">
+            <h3>大型商業施設 新築工事</h3>
+            <p>延床面積15,000㎡の大型商業施設。BIMを活用した施工管理で工期内・品質基準内での竣工を実現。</p>
+            <div class="wfc-meta"><span>福岡県福岡市</span><span>2024年竣工</span><span>延床15,000㎡</span></div>
+          </div>
+        </div>
+
+        <div class="work-full-card reveal" style="transition-delay:.1s" data-cat="土木">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1590725140246-20acddc1ec6d?w=800&q=80&fit=crop" alt="市道改良工事" loading="lazy">
+            <span class="wfc-cat">土木</span>
+          </div>
+          <div class="wfc-body">
+            <h3>市道改良・舗装工事</h3>
+            <p>延長2.5kmの市道整備。ICT施工機械を活用し効率的な品質管理を実現しながら工期内に完工。</p>
+            <div class="wfc-meta"><span>熊本県熊本市</span><span>2023年竣工</span><span>延長2.5km</span></div>
+          </div>
+        </div>
+
+        <div class="work-full-card reveal" style="transition-delay:.2s" data-cat="電気">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80&fit=crop" alt="オフィスビル電気設備" loading="lazy">
+            <span class="wfc-cat">電気</span>
+          </div>
+          <div class="wfc-body">
+            <h3>オフィスビル 電気設備一式工事</h3>
+            <p>地上10階建てオフィスビルの電気設備全般。省エネBEMS導入でエネルギー消費30%削減。</p>
+            <div class="wfc-meta"><span>長崎県長崎市</span><span>2023年竣工</span><span>地上10階</span></div>
+          </div>
+        </div>
+
+        <div class="work-full-card reveal" data-cat="管工事">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80&fit=crop" alt="病院空調設備" loading="lazy">
+            <span class="wfc-cat">管工事</span>
+          </div>
+          <div class="wfc-body">
+            <h3>総合病院 空調・衛生設備改修工事</h3>
+            <p>300床規模の総合病院。高い衛生基準を保ちながら稼働中の建物での改修を無事故で完了。</p>
+            <div class="wfc-meta"><span>鹿児島県鹿児島市</span><span>2023年竣工</span><span>300床</span></div>
+          </div>
+        </div>
+
+        <div class="work-full-card reveal" style="transition-delay:.1s" data-cat="土木">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1686358244616-aed9e9a1d827?w=800&q=80&fit=crop" alt="橋梁補強工事" loading="lazy">
+            <span class="wfc-cat">土木</span>
+          </div>
+          <div class="wfc-body">
+            <h3>橋梁 耐震補強工事</h3>
+            <p>竣工30年超の橋梁の耐震補強。ドローン点検・3Dスキャナーを活用した高精度な補強工事を実施。</p>
+            <div class="wfc-meta"><span>大分県大分市</span><span>2024年竣工</span><span>橋長180m</span></div>
+          </div>
+        </div>
+
+        <div class="work-full-card reveal" style="transition-delay:.2s" data-cat="建築">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80&fit=crop" alt="マンション新築" loading="lazy">
+            <span class="wfc-cat">建築</span>
+          </div>
+          <div class="wfc-body">
+            <h3>大規模マンション 新築工事</h3>
+            <p>地上15階・120戸のマンション。BIM活用により設計変更への迅速対応と高品質施工を両立。</p>
+            <div class="wfc-meta"><span>福岡県福岡市</span><span>2024年竣工</span><span>地上15階・120戸</span></div>
+          </div>
+        </div>
+
+        <div class="work-full-card reveal" data-cat="建築">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80&fit=crop" alt="工場新築" loading="lazy">
+            <span class="wfc-cat">建築</span>
+          </div>
+          <div class="wfc-body">
+            <h3>製造工場 新築工事</h3>
+            <p>延床20,000㎡の大規模工場建設。特殊な基礎工事と大型クレーンを用いた高難度施工を安全に遂行。</p>
+            <div class="wfc-meta"><span>福岡県北九州市</span><span>2022年竣工</span><span>延床20,000㎡</span></div>
+          </div>
+        </div>
+
+        <div class="work-full-card reveal" style="transition-delay:.1s" data-cat="土木">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80&fit=crop" alt="河川改修" loading="lazy">
+            <span class="wfc-cat">土木</span>
+          </div>
+          <div class="wfc-body">
+            <h3>河川改修・護岸工事</h3>
+            <p>洪水対策のための河川改修・護岸工事。出水期を避けた綿密な工程管理で工期内完成を達成。</p>
+            <div class="wfc-meta"><span>佐賀県佐賀市</span><span>2022年竣工</span><span>延長3.2km</span></div>
+          </div>
+        </div>
+
+        <div class="work-full-card reveal" style="transition-delay:.2s" data-cat="電気">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1566570144806-33f096699a57?w=800&q=80&fit=crop" alt="太陽光発電設備" loading="lazy">
+            <span class="wfc-cat">電気</span>
+          </div>
+          <div class="wfc-body">
+            <h3>大規模太陽光発電設備 施工管理</h3>
+            <p>出力2MWの大規模太陽光発電所。パネル設置から変電設備まで電気設備全般の施工管理を担当。</p>
+            <div class="wfc-meta"><span>宮崎県宮崎市</span><span>2022年竣工</span><span>出力2MW</span></div>
+          </div>
+        </div>
+
+        <div class="work-full-card reveal" data-cat="管工事">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80&fit=crop" alt="ホテル衛生設備" loading="lazy">
+            <span class="wfc-cat">管工事</span>
+          </div>
+          <div class="wfc-body">
+            <h3>シティホテル 衛生設備新設工事</h3>
+            <p>200室規模のシティホテルの給排水・衛生設備工事。稼働中の既存ホテル部分との調整を行いながら無事故完成。</p>
+            <div class="wfc-meta"><span>福岡県福岡市</span><span>2021年竣工</span><span>200室</span></div>
+          </div>
+        </div>
+
+        <div class="work-full-card reveal" style="transition-delay:.1s" data-cat="建築">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80&fit=crop" alt="学校改修" loading="lazy">
+            <span class="wfc-cat">建築</span>
+          </div>
+          <div class="wfc-body">
+            <h3>市立小学校 大規模改修工事</h3>
+            <p>築40年の公立小学校の大規模改修。授業への影響を最小化する分棟施工計画で夏休み期間内に完工。</p>
+            <div class="wfc-meta"><span>熊本県熊本市</span><span>2021年竣工</span><span>延床4,500㎡</span></div>
+          </div>
+        </div>
+
+        <div class="work-full-card reveal" style="transition-delay:.2s" data-cat="土木">
+          <div class="wfc-img">
+            <img src="https://images.unsplash.com/photo-1590725140246-20acddc1ec6d?w=800&q=80&fit=crop" alt="港湾整備" loading="lazy">
+            <span class="wfc-cat">土木</span>
+          </div>
+          <div class="wfc-body">
+            <h3>港湾整備工事（岸壁改良）</h3>
+            <p>水深10mの岸壁改良工事。海上作業を伴う特殊な施工環境での安全管理・品質管理を徹底し完工。</p>
+            <div class="wfc-meta"><span>長崎県長崎市</span><span>2020年竣工</span><span>岸壁延長250m</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-band">
+    <div class="container">
+      <h2>プロジェクトのご相談はこちら</h2>
+      <p>実績に関するお問い合わせ・新規プロジェクトのご相談をお受けしております</p>
+      <div class="btn-group">
+        <a href="contact.html" class="btn btn-gold">お問い合わせ →</a>
+        <a href="services.html" class="btn btn-ghost">事業内容を見る</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top-bar"></div>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><div class="logo-mark logo-mark--sm"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="22" width="32" height="5" rx="1" fill="white"/><rect x="8" y="10" width="4" height="12" rx="1" fill="white"/><rect x="28" y="10" width="4" height="12" rx="1" fill="white"/><rect x="4" y="7" width="32" height="5" rx="1" fill="#f59e0b"/><rect x="16" y="17" width="8" height="5" rx="1" fill="#93c5fd"/></svg></div><div class="logo-text"><span class="logo-main">九州建設テクノロジー</span><span class="logo-sub">KYUSHU CONSTRUCTION TECHNOLOGY</span></div></a>
+        <p class="footer-desc">九州の建設現場を、<br>テクノロジーで革新する。</p>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col"><h4>サービス</h4><ul><li><a href="services.html">建築施工管理</a></li><li><a href="services.html">土木施工管理</a></li><li><a href="services.html">電気施工管理</a></li><li><a href="services.html">管工事施工管理</a></li></ul></div>
+        <div class="footer-col"><h4>会社情報</h4><ul><li><a href="about.html">会社概要</a></li><li><a href="works.html">施工実績</a></li><li><a href="recruit.html">採用情報</a></li></ul></div>
+        <div class="footer-col"><h4>お問い合わせ</h4><ul><li><a href="contact.html">お問い合わせフォーム</a></li><li><a href="tel:092XXXXXXX">092-XXX-XXXX</a></li></ul></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2024 株式会社九州建設テクノロジー All Rights Reserved.</p></div></div>
+  </footer>
+
+  <button class="totop" id="toTop" aria-label="ページトップへ"><svg viewBox="0 0 24 24" fill="none"><path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('heroImg').addEventListener('load', function(){ this.classList.add('loaded'); });
+    if(document.getElementById('heroImg').complete) document.getElementById('heroImg').classList.add('loaded');
+
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const workCards  = document.querySelectorAll('.work-full-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.filter;
+        workCards.forEach(card => {
+          const match = cat === 'all' || card.dataset.cat === cat;
+          card.style.display = match ? '' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
