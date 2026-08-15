@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" width="640" height="160">
+  <title>株式会社九州建設テクノロジー - 横組ロゴ</title>
+  <!-- マーク：柱と梁のK -->
+  <g transform="translate(20,20)">
+    <rect x="6" y="6" width="108" height="108" fill="none" stroke="#0B2545" stroke-width="1.5"/>
+    <rect x="26" y="22" width="9" height="76" fill="#0B2545"/>
+    <polygon points="35,60 74,24 86,24 47,60" fill="#0B2545"/>
+    <polygon points="35,60 74,96 86,96 47,60" fill="#0B2545"/>
+    <rect x="26" y="103" width="72" height="2" fill="#8B95A1"/>
+    <rect x="26" y="15" width="72" height="2" fill="#8B95A1"/>
+  </g>
+  <!-- テキスト -->
+  <g transform="translate(180,60)">
+    <text x="0" y="16" font-family="'Shippori Mincho','Noto Serif JP','Yu Mincho','游明朝',serif" font-size="26" font-weight="600" fill="#0B2545" letter-spacing="3.6">九州建設テクノロジー</text>
+    <line x1="0" y1="34" x2="52" y2="34" stroke="#0B2545" stroke-width="1" opacity="0.5"/>
+    <text x="0" y="54" font-family="'Cormorant Garamond','Times New Roman',serif" font-size="11" font-weight="500" fill="#8B95A1" letter-spacing="3.2">KYUSHU KENSETSU TECHNOLOGY</text>
+  </g>
+</svg>

@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>お問い合わせ | 株式会社九州建設テクノロジー</title>
   <meta name="description" content="九州建設テクノロジーへのお問い合わせ・ご相談はこちら。フォーム・電話・メールにてお気軽にご連絡ください。">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="subpage.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css?v=1786789909">
+  <link rel="stylesheet" href="subpage.css?v=1786789909">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -21,15 +22,16 @@
   <header class="header scrolled" id="header">
     <div class="header-inner">
       <a href="index.html" class="logo">
-        <div class="logo-mark"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="22" width="32" height="5" rx="1" fill="white"/><rect x="8" y="10" width="4" height="12" rx="1" fill="white"/><rect x="28" y="10" width="4" height="12" rx="1" fill="white"/><rect x="4" y="7" width="32" height="5" rx="1" fill="#f59e0b"/><rect x="16" y="17" width="8" height="5" rx="1" fill="#93c5fd"/></svg></div>
-        <div class="logo-text"><span class="logo-main">九州建設テクノロジー</span><span class="logo-sub">KYUSHU CONSTRUCTION TECHNOLOGY</span></div>
+        <img class="logo-img logo-img--white" src="logo-horizontal-white.svg" alt="株式会社九州建設テクノロジー">
+        <img class="logo-img logo-img--dark" src="logo-horizontal.svg" alt="株式会社九州建設テクノロジー">
       </a>
       <nav class="nav" id="nav">
         <ul class="nav-list">
           <li><a href="about.html">会社概要</a></li>
           <li><a href="services.html">事業内容</a></li>
-          <li><a href="works.html">施工実績</a></li>
+          <li><a href="works.html">対応事例</a></li>
           <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="news.html">お知らせ</a></li>
           <li><a href="contact.html" class="nav-cta">お問い合わせ</a></li>
         </ul>
       </nav>
@@ -74,7 +76,7 @@
               <div class="cc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.07 5.18 2 2 0 015 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L9.91 10.9a16 16 0 006.18 6.18l1.27-.34a2 2 0 012.11.45c.907.339 1.85.573 2.81.7A2 2 0 0122 19.92v-3z" stroke="currentColor" stroke-width="1.8"/></svg></div>
               <div>
                 <p class="cc-label">お電話でのお問い合わせ</p>
-                <p class="cc-val">092-XXX-XXXX</p>
+                <p class="cc-val">03-6804-2140</p>
                 <p class="cc-note">受付時間：平日 9:00〜18:00</p>
               </div>
             </div>
@@ -82,7 +84,7 @@
               <div class="cc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 5h18v14H3z" stroke="currentColor" stroke-width="1.8"/><path d="M3 5l9 9 9-9" stroke="currentColor" stroke-width="1.8"/></svg></div>
               <div>
                 <p class="cc-label">メールでのお問い合わせ</p>
-                <p class="cc-val">info@kyushu-ct.co.jp</p>
+                <p class="cc-val">info@rt-solutions.co.jp</p>
                 <p class="cc-note">24時間受付（返信は翌営業日以降）</p>
               </div>
             </div>
@@ -90,8 +92,8 @@
               <div class="cc-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg></div>
               <div>
                 <p class="cc-label">本社所在地</p>
-                <p class="cc-val">〒812-0000</p>
-                <p class="cc-note">福岡県福岡市博多区○○町X-X-X KKTビル</p>
+                <p class="cc-val">〒104-0045</p>
+                <p class="cc-note">東京都中央区築地2丁目10番2号 JP-BASE築地駅前7階</p>
               </div>
             </div>
           </div>
@@ -107,37 +109,37 @@
           <h3>お問い合わせフォーム</h3>
           <div class="form-row">
             <div class="form-group">
-              <label>お名前 <span class="req">必須</span></label>
-              <input type="text" name="name" placeholder="山田 太郎" required>
+              <label for="cpf-name">お名前 <span class="req">必須</span></label>
+              <input type="text" id="cpf-name" name="name" placeholder="山田 太郎" required>
             </div>
             <div class="form-group">
-              <label>ふりがな</label>
-              <input type="text" name="kana" placeholder="やまだ たろう">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>会社名・組織名</label>
-              <input type="text" name="company" placeholder="株式会社〇〇">
-            </div>
-            <div class="form-group">
-              <label>部署名・役職</label>
-              <input type="text" name="dept" placeholder="営業部 部長">
+              <label for="cpf-kana">ふりがな</label>
+              <input type="text" id="cpf-kana" name="kana" placeholder="やまだ たろう">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label>メールアドレス <span class="req">必須</span></label>
-              <input type="email" name="email" placeholder="example@mail.com" required>
+              <label for="cpf-company">会社名・組織名</label>
+              <input type="text" id="cpf-company" name="company" placeholder="株式会社〇〇">
             </div>
             <div class="form-group">
-              <label>電話番号</label>
-              <input type="tel" name="tel" placeholder="092-XXX-XXXX">
+              <label for="cpf-dept">部署名・役職</label>
+              <input type="text" id="cpf-dept" name="dept" placeholder="営業部 部長">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cpf-email">メールアドレス <span class="req">必須</span></label>
+              <input type="email" id="cpf-email" name="email" placeholder="example@mail.com" required>
+            </div>
+            <div class="form-group">
+              <label for="cpf-tel">電話番号</label>
+              <input type="tel" id="cpf-tel" name="tel" placeholder="03-6804-2140">
             </div>
           </div>
           <div class="form-group">
-            <label>都道府県</label>
-            <select name="prefecture">
+            <label for="cpf-prefecture">都道府県</label>
+            <select id="cpf-prefecture" name="prefecture">
               <option value="">選択してください</option>
               <option>福岡県</option><option>佐賀県</option><option>長崎県</option>
               <option>熊本県</option><option>大分県</option><option>宮崎県</option>
@@ -145,8 +147,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label>お問い合わせ種別 <span class="req">必須</span></label>
-            <select name="subject" required>
+            <label for="cpf-subject">お問い合わせ種別 <span class="req">必須</span></label>
+            <select id="cpf-subject" name="subject" required>
               <option value="">選択してください</option>
               <option>建築施工管理について</option>
               <option>土木施工管理について</option>
@@ -159,8 +161,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label>ご予算・規模感（任意）</label>
-            <select name="budget">
+            <label for="cpf-budget">ご予算・規模感（任意）</label>
+            <select id="cpf-budget" name="budget">
               <option value="">選択してください</option>
               <option>〜500万円</option>
               <option>500万〜1,000万円</option>
@@ -171,8 +173,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label>お問い合わせ内容 <span class="req">必須</span></label>
-            <textarea name="message" rows="6" placeholder="ご相談内容をできるだけ詳しくご記入ください。&#10;（例）工事の種別・規模・場所・希望工期など" required></textarea>
+            <label for="cpf-message">お問い合わせ内容 <span class="req">必須</span></label>
+            <textarea id="cpf-message" name="message" rows="6" placeholder="ご相談内容をできるだけ詳しくご記入ください。&#10;（例）工事の種別・規模・場所・希望工期など" required></textarea>
           </div>
           <div class="form-group" style="margin-bottom:24px;">
             <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer; font-weight:400;">
@@ -219,21 +221,21 @@
               <div class="access-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg></div>
               <div>
                 <dt>所在地</dt>
-                <dd>〒812-0000<br>福岡県福岡市博多区○○町X丁目X番X号 KKTビル</dd>
+                <dd>〒104-0045<br>東京都中央区築地2丁目10番2号 JP-BASE築地駅前7階</dd>
               </div>
             </div>
             <div class="access-item">
               <div class="access-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M8 3L4 7l14 14 4-4-14-14z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M3 21l4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
               <div>
                 <dt>電話番号</dt>
-                <dd><a href="tel:092XXXXXXX" style="color:var(--blue);font-weight:600;">092-XXX-XXXX</a></dd>
+                <dd><a href="tel:0368042140" style="color:var(--blue);font-weight:600;">03-6804-2140</a></dd>
               </div>
             </div>
             <div class="access-item">
               <div class="access-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M3 5l9 9 9-9" stroke="currentColor" stroke-width="1.8"/></svg></div>
               <div>
                 <dt>メールアドレス</dt>
-                <dd><a href="mailto:info@kyushu-ct.co.jp" style="color:var(--blue);font-weight:600;">info@kyushu-ct.co.jp</a></dd>
+                <dd><a href="mailto:info@rt-solutions.co.jp" style="color:var(--blue);font-weight:600;">info@rt-solutions.co.jp</a></dd>
               </div>
             </div>
             <div class="access-item">
@@ -247,7 +249,7 @@
               <div class="access-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l2-2 2 2 2-2 2 2 2-2 2 2 2-2 2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M3 12l2-2 2 2 2-2 2 2 2-2 2 2 2-2 2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M3 7l2-2 2 2 2-2 2 2 2-2 2 2 2-2 2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
               <div>
                 <dt>アクセス</dt>
-                <dd>地下鉄博多駅より徒歩5分<br>JR博多駅より徒歩8分</dd>
+                <dd>東京メトロ日比谷線「築地駅」より徒歩3分<br>都営大江戸線「築地市場駅」より徒歩5分</dd>
               </div>
             </div>
           </div>
@@ -272,7 +274,7 @@
             <svg class="faq-arrow" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">九州全域（福岡・佐賀・長崎・熊本・大分・宮崎・鹿児島）に対応しています。本社の福岡市を拠点に、熊本支店・各営業所を通じて迅速に対応できる体制を整えています。</div>
+            <div class="faq-answer-inner">九州全域（福岡・佐賀・長崎・熊本・大分・宮崎・鹿児島）に対応しています。現地の状況に応じて、迅速に対応できる体制を整えています。</div>
           </div>
         </div>
         <div class="faq-item">
@@ -312,7 +314,7 @@
             <svg class="faq-arrow" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
           <div class="faq-answer">
-            <div class="faq-answer-inner">緊急対応も可能な限り対応します。災害復旧工事や急を要するプロジェクトの場合は、まずはお電話（092-XXX-XXXX）にてご連絡ください。状況に応じて最速で対応体制を整えます。</div>
+            <div class="faq-answer-inner">緊急対応も可能な限り対応します。災害復旧工事や急を要するプロジェクトの場合は、まずはお電話（03-6804-2140）にてご連絡ください。状況に応じて最速で対応体制を整えます。</div>
           </div>
         </div>
         <div class="faq-item">
@@ -334,47 +336,20 @@
     <div class="footer-top-bar"></div>
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a href="index.html" class="logo"><div class="logo-mark logo-mark--sm"><svg viewBox="0 0 40 40" fill="none"><rect x="4" y="22" width="32" height="5" rx="1" fill="white"/><rect x="8" y="10" width="4" height="12" rx="1" fill="white"/><rect x="28" y="10" width="4" height="12" rx="1" fill="white"/><rect x="4" y="7" width="32" height="5" rx="1" fill="#f59e0b"/><rect x="16" y="17" width="8" height="5" rx="1" fill="#93c5fd"/></svg></div><div class="logo-text"><span class="logo-main">九州建設テクノロジー</span><span class="logo-sub">KYUSHU CONSTRUCTION TECHNOLOGY</span></div></a>
+        <a href="index.html" class="logo"><img class="logo-img" src="logo-horizontal-white.svg" alt="株式会社九州建設テクノロジー"></a>
         <p class="footer-desc">九州の建設現場を、<br>テクノロジーで革新する。</p>
       </div>
       <div class="footer-nav">
         <div class="footer-col"><h4>サービス</h4><ul><li><a href="services.html">建築施工管理</a></li><li><a href="services.html">土木施工管理</a></li><li><a href="services.html">電気施工管理</a></li><li><a href="services.html">管工事施工管理</a></li></ul></div>
-        <div class="footer-col"><h4>会社情報</h4><ul><li><a href="about.html">会社概要</a></li><li><a href="works.html">施工実績</a></li><li><a href="recruit.html">採用情報</a></li></ul></div>
-        <div class="footer-col"><h4>お問い合わせ</h4><ul><li><a href="contact.html">お問い合わせフォーム</a></li><li><a href="tel:092XXXXXXX">092-XXX-XXXX</a></li></ul></div>
+        <div class="footer-col"><h4>会社情報</h4><ul><li><a href="about.html">会社概要</a></li><li><a href="works.html">対応事例</a></li><li><a href="news.html">お知らせ</a></li><li><a href="recruit.html">採用情報</a></li></ul></div>
+        <div class="footer-col"><h4>お問い合わせ</h4><ul><li><a href="contact.html">お問い合わせフォーム</a></li><li><a href="tel:0368042140">03-6804-2140</a></li></ul></div>
       </div>
     </div>
-    <div class="footer-bottom"><div class="container"><p>&copy; 2024 株式会社九州建設テクノロジー All Rights Reserved.</p></div></div>
+    <div class="footer-bottom"><div class="container"><p>&copy; 2026 株式会社九州建設テクノロジー All Rights Reserved.</p></div></div>
   </footer>
 
   <button class="totop" id="toTop" aria-label="ページトップへ"><svg viewBox="0 0 24 24" fill="none"><path d="M18 15L12 9L6 15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
-  <script src="script.js"></script>
-  <script>
-    document.getElementById('heroImg').addEventListener('load', function(){ this.classList.add('loaded'); });
-    if(document.getElementById('heroImg').complete) document.getElementById('heroImg').classList.add('loaded');
-
-    // FAQ Accordion
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item   = btn.closest('.faq-item');
-        const answer = item.querySelector('.faq-answer');
-        const isOpen = item.classList.contains('open');
-
-        // Close all
-        document.querySelectorAll('.faq-item.open').forEach(el => {
-          el.classList.remove('open');
-          el.querySelector('.faq-answer').style.maxHeight = '0';
-          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-        });
-
-        // Open clicked if was closed
-        if (!isOpen) {
-          item.classList.add('open');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
-  </script>
+  <script src="script.js?v=1786789909"></script>
 </body>
 </html>

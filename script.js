@@ -205,12 +205,14 @@ function initHeroText() {
 if (!prefersReduced) {
   const heroImg = document.querySelector('.hero-media img');
   if (heroImg) {
+    const maxShift = 50; // px — stays within the image's built-in overscan buffer
     let ticking = false;
     window.addEventListener('scroll', () => {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
-        heroImg.style.transform = `scale(1) translateY(${window.scrollY * 0.28}px)`;
+        const shift = Math.min(window.scrollY * 0.15, maxShift);
+        heroImg.style.transform = `scale(1) translateY(${shift}px)`;
         ticking = false;
       });
     }, { passive: true });
@@ -387,15 +389,6 @@ if (form) {
     }, 1500);
   });
   form.querySelectorAll('[required]').forEach(f => f.addEventListener('input', () => { f.style.borderColor = ''; f.style.boxShadow = ''; }));
-}
-
-/* ============================================================
-   19.  Marquee pause on hover
-   ============================================================ */
-const marqueeTrack = document.querySelector('.marquee-track');
-if (marqueeTrack) {
-  marqueeTrack.addEventListener('mouseenter', () => marqueeTrack.style.animationPlayState = 'paused');
-  marqueeTrack.addEventListener('mouseleave', () => marqueeTrack.style.animationPlayState = '');
 }
 
 /* ============================================================
