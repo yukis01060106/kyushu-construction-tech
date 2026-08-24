@@ -1,2 +1,8 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
 .DS_Store
-中島.png
+Thumbs.db
+.env*.local
