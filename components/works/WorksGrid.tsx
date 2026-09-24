@@ -48,7 +48,7 @@ export function WorksGrid() {
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-500 ease-brand group-hover:scale-[1.06]"
               />
-              <span className="absolute top-[14px] left-[14px] rounded-full bg-gold px-3 py-1 text-[11px] font-bold tracking-[0.05em] text-white transition-transform duration-300 group-hover:scale-[1.06]">
+              <span className="absolute top-[14px] left-[14px] rounded-full bg-accent-grad px-3 py-1 font-mono text-[11px] font-bold tracking-[0.05em] text-white transition-transform duration-300 group-hover:scale-[1.06]">
                 {work.category}
               </span>
             </div>

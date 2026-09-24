@@ -10,12 +10,12 @@ import { photos } from '@/lib/images';
 export const metadata: Metadata = {
   title: '対応事例',
   description:
-    '九州建設テクノロジーの対応事例。建築・土木・電気・管工事、幅広い規模・分野に対応できる施工管理サービスをご紹介します。',
+    '九州建設テクノロジーの対応事例。DXコンサルティング・システム開発・SES・施工管理DXで対応可能な案件の例をご紹介します。',
 };
 
 const summary = [
-  { value: '7', unit: '県', label: '対応エリア（九州全域）' },
-  { value: '4', unit: '分野', label: '施工管理分野' },
+  { value: '3', unit: '領域', label: 'DXコンサル・開発・SES' },
+  { value: '1', unit: 'つ', label: '注力領域：施工管理DX' },
   { value: '2024', unit: '', label: '設立' },
 ];
 
@@ -25,7 +25,7 @@ export default function WorksPage() {
       <PageHero
         label="WORKS"
         title="対応事例"
-        description="建築・土木・電気・管工事、幅広い規模・分野の施工管理に対応しています。以下は対応可能な工事の一例です。"
+        description="業務改善のコンサルティングからシステム開発、エンジニア参画まで。以下は対応可能な案件の一例です。"
         image={photos.heroWorks}
       />
       <Breadcrumb current="対応事例" />
@@ -55,10 +55,10 @@ export default function WorksPage() {
         <Container>
           <Reveal className="mb-16 text-center">
             <LabelTag center>WORKS LIST</LabelTag>
-            <SectionTitle>対応可能な工事の例</SectionTitle>
+            <SectionTitle>対応可能な案件の例</SectionTitle>
             <Divider center />
             <SectionSub className="mt-4">
-              実際の施工事例ではなく、対応可能な工事規模・分野をご案内するための例です
+              特定のお客様の事例ではなく、対応可能な案件の内容をご案内するための例です
             </SectionSub>
           </Reveal>
 

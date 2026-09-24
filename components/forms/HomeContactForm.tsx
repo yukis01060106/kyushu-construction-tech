@@ -34,8 +34,10 @@ export function HomeContactForm({ className }: { className?: string }) {
       <Field label="お問い合わせ種別" htmlFor="cf-subject" required>
         <Select id="cf-subject" name="subject" required defaultValue="">
           <option value="">選択してください</option>
-          <option>サービスについて</option>
-          <option>お見積もり依頼</option>
+          <option>DXコンサルティングについて</option>
+          <option>システム開発のご相談</option>
+          <option>SES・エンジニアのご依頼</option>
+          <option>施工管理DXについて</option>
           <option>採用について</option>
           <option>その他</option>
         </Select>

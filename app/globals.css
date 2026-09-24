@@ -13,8 +13,8 @@
   --color-brand: #1d4ed8;
   --color-brand-dark: #1e40af;
   --color-brand-light: #3b82f6;
-  --color-gold: #f59e0b;
-  --color-gold-dark: #d97706;
+  --color-gold: #22d3ee; /* アクセント（シアン）。旧ゴールドのトークン名を流用 */
+  --color-gold-dark: #0891b2;
 
   /* Grays（mock の --gray-* と同値に固定） */
   --color-gray-50: #f9fafb;
@@ -30,6 +30,7 @@
   /* Fonts */
   --font-jp: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif;
   --font-en: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
   --font-serif: 'Shippori Mincho', 'Noto Serif JP', 'Yu Mincho', serif;
 
   /* Radius */
@@ -84,10 +85,10 @@
   @keyframes dotPulse {
     0%,
     100% {
-      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.3);
+      box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.3);
     }
     50% {
-      box-shadow: 0 0 0 6px rgba(245, 158, 11, 0.1);
+      box-shadow: 0 0 0 6px rgba(34, 211, 238, 0.1);
     }
   }
   @keyframes scrollLine {
@@ -230,7 +231,7 @@
   }
   .cursor-ring.is-active {
     border-color: var(--color-gold);
-    background: rgba(245, 158, 11, 0.06);
+    background: rgba(34, 211, 238, 0.06);
   }
   .cursor-ring.is-big {
     width: 80px;
@@ -287,4 +288,25 @@
     opacity: 1;
     transform: translateY(0) skewY(0);
   }
+}
+
+/* ============================================================
+   Tech utilities（IT感を出すための背景・グラデーション）
+   ============================================================ */
+@utility bg-accent-grad {
+  background-image: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+}
+@utility text-accent-grad {
+  background-image: linear-gradient(90deg, #38bdf8 0%, #22d3ee 50%, #a5f3fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+/* 暗い背景に敷く方眼グリッド（中央ほど濃く、端はフェード） */
+@utility bg-tech-grid {
+  background-image:
+    linear-gradient(rgba(148, 197, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 197, 255, 0.07) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 60% 40%, #000 30%, transparent 80%);
 }

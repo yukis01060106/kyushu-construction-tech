@@ -103,7 +103,7 @@ $body = <<<EOT
 部署名・役職: {$dept}
 メールアドレス: {$email}
 電話番号: {$tel}
-都道府県: {$prefecture}
+地域: {$prefecture}
 お問い合わせ種別: {$subject}
 ご予算・規模感: {$budget}
 

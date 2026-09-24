@@ -4,9 +4,9 @@ export const site = {
   name: '株式会社九州建設テクノロジー',
   nameEn: 'KYUSHU CONSTRUCTION TECHNOLOGY CO., LTD.',
   shortName: '九州建設テクノロジー',
-  tagline: '施工管理のプロフェッショナル',
+  tagline: 'DX・システム開発で、現場を前へ',
   description:
-    '株式会社九州建設テクノロジーは、建築・土木・電気・管工事など施工管理全般を、DX・AIの力で支える九州のプロフェッショナル集団です。',
+    '株式会社九州建設テクノロジーは、DXコンサルティング・システム開発・SESを軸に、企業の業務変革を支援するテクノロジーカンパニーです。施工管理の現場を知るエンジニアとして、建設業の施工管理DXに取り組んでいます。',
   /** 公開ドメインが決まったら書き換える（OGP・canonical に使用） */
   url: 'https://example.co.jp',
   tel: '03-6804-2140',
@@ -34,6 +34,7 @@ export const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeU
 export const navLinks = [
   { href: '/about/', label: '会社概要' },
   { href: '/services/', label: '事業内容' },
+  { href: '/construction-dx/', label: '施工管理DX' },
   { href: '/works/', label: '対応事例' },
   { href: '/recruit/', label: '採用情報' },
   { href: '/news/', label: 'お知らせ' },
@@ -44,10 +45,10 @@ export const footerNav = [
   {
     title: 'サービス',
     links: [
-      { href: '/services/', label: '建築施工管理' },
-      { href: '/services/', label: '土木施工管理' },
-      { href: '/services/', label: '電気施工管理' },
-      { href: '/services/', label: '管工事施工管理' },
+      { href: '/services/', label: 'DXコンサルティング' },
+      { href: '/services/', label: 'システム開発' },
+      { href: '/services/', label: 'SES・エンジニア支援' },
+      { href: '/construction-dx/', label: '施工管理DX' },
     ],
   },
   {

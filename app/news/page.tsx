@@ -40,7 +40,7 @@ export default function NewsPage() {
 
       <CtaBand
         title="まずはお気軽にご相談ください"
-        description="施工管理に関するお問い合わせ・お見積もりはこちらから"
+        description="DX・システム開発・施工管理DXに関するご相談はこちらから"
         primary={{ href: '/contact/', label: 'お問い合わせ →' }}
         secondary={{ href: '/services/', label: '事業内容を見る' }}
       />

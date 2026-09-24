@@ -10,7 +10,7 @@ export function MessageSection() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={photos.messageBg}
-          alt="現場作業員チーム"
+          alt="ビル街に立つビジネスマン"
           loading="lazy"
           className="h-full w-full object-cover object-[center_30%]"
         />
@@ -20,13 +20,13 @@ export function MessageSection() {
       <Container className="relative z-[1]">
         <Reveal className="max-w-[620px]">
           <LabelTag tone="gold">MESSAGE</LabelTag>
-          <blockquote className="my-5 mb-7 border-l-4 border-gold pl-6 font-serif text-[clamp(1.5rem,2.5vw,2.1rem)] leading-[1.6] font-bold text-white">
-            「現場の安全と品質は、
+          <blockquote className="my-5 mb-7 border-l-4 border-gold pl-6 font-black tracking-[-0.01em] text-[clamp(1.5rem,2.5vw,2.1rem)] leading-[1.6] text-white">
+            「現場を知っているから、
             <br />
-            すべての基盤である。」
+            使われるシステムがつくれる。」
           </blockquote>
           <p className="mb-7 text-[15px] leading-[1.95] text-white/72">
-            私たちは、建設現場の一つひとつが、地域の未来をつくると信じています。技術者としての誇りと責任を胸に、今日も九州の現場で、確かな仕事を積み重ねていきます。
+            システムは、使われてはじめて価値を持ちます。私たちはDXとシステム開発で多くの業務に向き合いながら、自ら施工管理の現場にも立ってきました。現場の手間や不安を知っているからこそ、つくれるものがある。その強みを、建設業のDXに注いでいきます。
           </p>
           <p className="text-sm text-white/55">
             取締役副社長 <strong className="mt-[2px] block text-base text-white">中島 嘉寿</strong>

@@ -15,14 +15,14 @@ export function Footer() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className="block h-8 w-auto" src="/logo-mark-white.svg" alt="" width={32} height={32} />
-            <span className="font-serif text-base leading-none font-bold tracking-[0.04em] whitespace-nowrap text-white">
+            <span className="text-base leading-none font-black tracking-[0.02em] whitespace-nowrap text-white">
               {site.shortName}
             </span>
           </Link>
           <p className="text-sm leading-[1.8] text-white/45">
-            九州の建設現場を、
+            DX・システム開発で、
             <br />
-            テクノロジーで革新する。
+            建設の現場を前へ。
           </p>
         </div>
 

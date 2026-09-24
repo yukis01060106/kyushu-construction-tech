@@ -1,98 +1,119 @@
 /**
- * 写真素材（Unsplash）のURLをここに集約している。
- * 本番写真に差し替えるときは、このファイルの値を
- * `/images/xxx.jpg` のようなローカルパスへ変更すればサイト全体に反映される。
+ * 写真素材のパスをここに集約している。
+ * - 人物・オフィス写真: おしごとピクチャーズ（https://free-images.jp/）からダウンロードして
+ *   public/images/ に配置（商用利用可・クレジット不要。素材自体の再配布は禁止）
+ * - 建設・一部の街並み写真: Unsplash の CDN を参照（Unsplash ライセンス）
+ * 本番写真に差し替えるときは、このファイルの値を変更すればサイト全体に反映される。
  */
 
 const unsplash = (id: string, w: number, q = 80) =>
   `https://images.unsplash.com/photo-${id}?w=${w}&q=${q}&fit=crop`;
 
-/** 素材ID（同じ写真を複数箇所で使い回している） */
+/** public/images/ 配下の写真 */
+const local = {
+  teamLaptopCafe: '/images/team-laptop-cafe.jpg', // カフェ風オフィスでノートPCを囲む男女
+  womenLaptop: '/images/women-laptop.jpg', // ノートPCで作業する女性2人
+  womenStudy: '/images/women-study.jpg', // メモを取りながら作業する女性2人
+  engineerGlasses: '/images/engineer-glasses.jpg', // メガネのエンジニア
+  engineerSmile: '/images/engineer-smile.jpg', // 笑顔でPC作業するエンジニア
+  casualTalk: '/images/casual-talk.jpg', // オフィスでの打ち合わせ
+  analystMonitors: '/images/analyst-monitors.jpg', // デュアルモニターでデータを見る女性
+  officeMonitors: '/images/office-monitors.jpg', // モニターに向かう社員
+  pairMonitor: '/images/pair-monitor.jpg', // モニターを見ながら話す男女
+  teamMeeting: '/images/team-meeting.jpg', // ノートPCを囲むミーティング
+  meetingRoom: '/images/meeting-room.jpg', // 会議室でのミーティング
+  teamPortrait: '/images/team-portrait.jpg', // 社員4人の集合写真
+  presentation: '/images/presentation.jpg', // ホワイトボード前での発表
+  documentReview: '/images/document-review.jpg', // 資料を確認する男女
+  businessmanCity: '/images/businessman-city.jpg', // ビル街に立つビジネスマン
+  businessDistrict: '/images/business-district.jpg', // オフィス街を歩く人々
+  datacenter: '/images/datacenter.jpg', // データセンターの女性
+  datacenterAisle: '/images/datacenter-aisle.jpg', // データセンターの通路
+  officeInterior: '/images/office-interior.jpg', // 明るいオフィス
+  cityAvenue: '/images/city-avenue.jpg', // ビル街の大通り
+  officeAvenue: '/images/office-avenue.jpg', // オフィスビルが並ぶ通り
+} as const;
+
+/** Unsplash の素材ID */
 const ids = {
+  blueprint: '1581092160562-40aa08e78837', // 図面を広げた作業
   aerialSite: '1504307651254-35680f356dfd', // 建設現場の空撮
-  meeting: '1503387762-592deb58ef4e', // 設計打ち合わせ
-  team: '1516216628859-9bccecab13ca', // 現場チーム / 土木
   building: '1486325212027-8081e485255e', // 建築
-  electric: '1565008576549-57569a49371d', // 電気設備
-  pipes: '1541888946425-d81bb19240f5', // 管工事 / 現場
-  safety: '1531834685032-c34bf0d84c77', // 安全管理
-  bridge: '1686358244616-aed9e9a1d827', // 橋梁・インフラ
-  worker: '1508450859948-4e04fabaa4ea', // 作業員
-  solar: '1497440001374-f26997328c1b', // 太陽光発電
+  pipes: '1541888946425-d81bb19240f5', // 現場
+  safety: '1531834685032-c34bf0d84c77', // 現場の作業員
 } as const;
 
 export const photos = {
   /** トップのヒーロー画像 */
-  heroHome: unsplash(ids.aerialSite, 1920, 85),
+  heroHome: local.teamLaptopCafe,
 
   /** 下層ページのヒーロー画像 */
-  heroAbout: unsplash(ids.pipes, 1920, 85),
-  heroServices: unsplash(ids.bridge, 1920, 85),
-  heroWorks: unsplash(ids.aerialSite, 1920, 85),
-  heroRecruit: `${unsplash(ids.worker, 1920, 85)}&crop=center`,
-  heroNews: unsplash(ids.meeting, 1920, 85),
-  heroContact: unsplash(ids.building, 1920, 85),
+  heroAbout: local.officeAvenue,
+  heroServices: local.analystMonitors,
+  heroConstructionDx: unsplash(ids.aerialSite, 1920, 85),
+  heroWorks: local.officeMonitors,
+  heroRecruit: local.teamPortrait,
+  heroNews: local.cityAvenue,
+  heroContact: local.casualTalk,
 
   /** セクション背景 */
-  strengthsBg: unsplash(ids.pipes, 1920),
-  worksCtaBg: unsplash(ids.bridge, 1920),
-  messageBg: unsplash(ids.pipes, 1920),
-  contactBg: unsplash(ids.worker, 1920, 75),
+  strengthsBg: local.businessDistrict,
+  focusBg: unsplash(ids.aerialSite, 1920),
+  worksCtaBg: local.datacenter,
+  messageBg: local.businessmanCity,
+  contactBg: local.officeInterior,
 
   /** ABOUT セクション */
-  aboutMain: unsplash(ids.meeting, 900, 85),
-  aboutSub: unsplash(ids.team, 600, 85),
+  aboutMain: local.womenLaptop,
+  aboutSub: unsplash(ids.pipes, 600, 85),
 
   /** RECRUIT セクション */
-  recruitMain: `${unsplash(ids.aerialSite, 900)}&crop=center`,
-  recruitMessage: unsplash(ids.aerialSite, 900),
+  recruitMain: local.engineerSmile,
+  recruitMessage: local.engineerGlasses,
 
   /** サービスカード */
-  srvArchitecture: unsplash(ids.building, 800),
-  srvCivil: unsplash(ids.team, 800),
-  srvElectric: unsplash(ids.electric, 800),
-  srvPipe: unsplash(ids.pipes, 800),
-  srvQuality: unsplash(ids.aerialSite, 800),
-  srvSafety: unsplash(ids.safety, 800),
+  srvConsulting: local.meetingRoom,
+  srvDevelopment: local.engineerGlasses,
+  srvSes: local.pairMonitor,
 
   /** サービス詳細（大きめ） */
-  srvDetailArchitecture: unsplash(ids.building, 900),
-  srvDetailCivil: unsplash(ids.team, 900),
-  srvDetailElectric: unsplash(ids.electric, 900),
-  srvDetailPipe: unsplash(ids.pipes, 900),
-  srvDetailQuality: unsplash(ids.meeting, 900),
-  srvDetailSafety: unsplash(ids.safety, 900),
+  srvDetailConsulting: local.teamMeeting,
+  srvDetailDevelopment: local.engineerSmile,
+  srvDetailSes: local.pairMonitor,
+  srvDetailConstructionDx: unsplash(ids.blueprint, 900),
 
-  /** 対応事例カード */
-  workCommercial: unsplash(ids.building, 800),
-  workRoad: unsplash(ids.team, 800),
-  workOfficeElectric: unsplash(ids.electric, 800),
-  workHospital: unsplash(ids.pipes, 800),
-  workBridge: unsplash(ids.bridge, 800),
-  workMansion: unsplash(ids.meeting, 800),
-  workFactory: unsplash(ids.aerialSite, 800),
-  workRiver: unsplash(ids.bridge, 800),
-  workSolar: unsplash(ids.solar, 800),
-  workHotel: unsplash(ids.meeting, 800),
-  workSchool: unsplash(ids.pipes, 800),
-  workPort: unsplash(ids.team, 800),
+  /** 施工管理DXページ */
+  cdxField: unsplash(ids.safety, 900),
+  cdxTech: local.analystMonitors,
+
+  /** 事例カード */
+  workBusinessFlow: local.presentation,
+  workSaas: local.womenStudy,
+  workWebApp: local.engineerGlasses,
+  workLegacy: local.officeMonitors,
+  workDevTeam: local.pairMonitor,
+  workInfra: local.datacenterAisle,
+  workPmo: local.meetingRoom,
+  workSitePhoto: unsplash(ids.building, 800),
+  workSiteReport: unsplash(ids.pipes, 800),
+  workSiteDocs: unsplash(ids.blueprint, 800),
 
   /** ギャラリー（会社概要） */
   gallery: [
-    unsplash(ids.aerialSite, 800),
-    unsplash(ids.meeting, 800),
-    unsplash(ids.worker, 800),
-    unsplash(ids.bridge, 800),
-    unsplash(ids.team, 800),
-    unsplash(ids.building, 800),
+    local.womenLaptop,
+    local.teamMeeting,
+    local.teamPortrait,
+    local.presentation,
+    local.analystMonitors,
+    local.officeAvenue,
   ],
 
   /** 職場環境（採用） */
   workplace: [
-    unsplash(ids.aerialSite, 800),
-    unsplash(ids.meeting, 700),
-    unsplash(ids.building, 700),
-    unsplash(ids.bridge, 700),
-    unsplash(ids.pipes, 700),
+    local.officeInterior,
+    local.engineerGlasses,
+    local.womenStudy,
+    local.casualTalk,
+    local.documentReview,
   ],
 } as const;

@@ -1,5 +1,6 @@
 import { AboutSection } from '@/components/home/AboutSection';
 import { ContactSection } from '@/components/home/ContactSection';
+import { FocusSection } from '@/components/home/FocusSection';
 import { Hero } from '@/components/home/Hero';
 import { Loader } from '@/components/home/Loader';
 import { MessageSection } from '@/components/home/MessageSection';
@@ -7,6 +8,7 @@ import { NewsSection } from '@/components/home/NewsSection';
 import { RecruitSection } from '@/components/home/RecruitSection';
 import { ServicesSection } from '@/components/home/ServicesSection';
 import { StrengthsSection } from '@/components/home/StrengthsSection';
+import { TechSection } from '@/components/home/TechSection';
 import { WorksCtaSection } from '@/components/home/WorksCtaSection';
 
 export default function HomePage() {
@@ -17,6 +19,8 @@ export default function HomePage() {
       <NewsSection />
       <AboutSection />
       <ServicesSection />
+      <TechSection />
+      <FocusSection />
       <StrengthsSection />
       <WorksCtaSection />
       <MessageSection />

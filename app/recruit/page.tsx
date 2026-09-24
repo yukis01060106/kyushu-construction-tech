@@ -10,50 +10,68 @@ import { photos } from '@/lib/images';
 export const metadata: Metadata = {
   title: '採用情報',
   description:
-    '九州建設テクノロジーの採用情報。施工管理技術者・現場監督など積極採用中。資格取得支援・完全週休2日制など充実した環境。',
+    '九州建設テクノロジーの採用情報。システムエンジニア・DXコンサルタント・建設DXスペシャリストなどを募集中。資格取得支援・完全週休2日制など充実した環境。',
 };
+
+const salary = '経験・スキルを考慮のうえ決定';
+const office = '本社（東京都中央区）またはプロジェクト先';
+const holiday = '完全週休2日制・年間休日120日以上';
 
 const jobs = [
   {
-    badge: '正社員',
-    badgeTone: 'bg-[#dcfce7] text-[#16a34a]',
-    title: '施工管理技術者',
-    subtitle: '（経験者・未経験者歓迎）',
+    badge: '中途採用',
+    badgeTone: 'bg-[#dbeafe] text-[#1d4ed8]',
+    title: 'システムエンジニア・プログラマー',
+    subtitle: '（開発経験者）',
     description:
-      '建築・土木・電気・管工事のいずれかの施工管理業務を担当していただきます。未経験の方は先輩社員がマンツーマンでフォロー。資格取得を目指しながら現場経験を積んでいただけます。',
+      '受託開発やお客様先のプロジェクトで、業務システム・Webアプリケーションの設計・開発・テストを担当していただきます。経験やご希望に合わせてプロジェクトをアサインします。',
     details: [
-      { label: '給与', value: '月給 22万円〜40万円（経験・資格による）' },
-      { label: '勤務地', value: '九州各地の建設現場（転居不要）' },
-      { label: '休日', value: '完全週休2日制・年間休日120日以上' },
-      { label: '対象', value: '未経験者歓迎・学歴不問' },
+      { label: '給与', value: salary },
+      { label: '勤務地', value: office },
+      { label: '休日', value: holiday },
+      { label: '対象', value: 'システム開発の実務経験がある方' },
     ],
   },
   {
     badge: '中途採用',
     badgeTone: 'bg-[#dbeafe] text-[#1d4ed8]',
-    title: '現場監督',
-    subtitle: '（施工管理経験3年以上）',
+    title: 'DXコンサルタント・PM',
+    subtitle: '（コンサル・PM経験者）',
     description:
-      '施工管理経験者を積極的に募集しています。即戦力として活躍していただきながら、ICT・BIM活用など最新技術も習得できる環境です。1級施工管理技士取得者は優遇します。',
+      'お客様の業務課題のヒアリング・整理から、DX計画の立案、システム導入プロジェクトの推進までを担っていただきます。',
     details: [
-      { label: '給与', value: '月給 30万円〜55万円（経験・資格による）' },
-      { label: '勤務地', value: '九州各地の建設現場' },
-      { label: '休日', value: '完全週休2日制・年間休日120日以上' },
-      { label: '対象', value: '施工管理経験3年以上' },
+      { label: '給与', value: salary },
+      { label: '勤務地', value: office },
+      { label: '休日', value: holiday },
+      { label: '対象', value: 'ITコンサル・PM・PMOいずれかの経験がある方' },
+    ],
+  },
+  {
+    badge: '経験者採用',
+    badgeTone: 'bg-[#dcfce7] text-[#16a34a]',
+    title: '建設DXスペシャリスト',
+    subtitle: '（施工管理経験者・IT未経験可）',
+    description:
+      '施工管理の現場経験を活かし、建設会社様向けDXの企画や要件定義、現場への導入支援を担っていただきます。ITの知識は入社後に身につけられます。',
+    details: [
+      { label: '給与', value: salary },
+      { label: '勤務地', value: office },
+      { label: '休日', value: holiday },
+      { label: '対象', value: '施工管理の実務経験がある方' },
     ],
   },
   {
     badge: '新卒採用',
     badgeTone: 'bg-[#fef9c3] text-[#a16207]',
-    title: '施工管理職',
+    title: 'ITエンジニア・コンサルタント職',
     subtitle: '（2027年3月卒業見込み）',
     description:
-      '建築・土木・電気系の学科を卒業見込みの方を対象に採用しています。入社後は充実した新人研修と丁寧なOJTで即戦力として育成。早期の資格取得もサポートします。',
+      '入社後の研修でITの基礎を身につけたうえで、開発やDX支援のプロジェクトに参加していただきます。文系・理系は問いません。',
     details: [
-      { label: '給与', value: '月給 22万円〜（別途各種手当あり）' },
-      { label: '勤務地', value: '九州各地の建設現場' },
-      { label: '休日', value: '完全週休2日制・年間休日120日以上' },
-      { label: '対象', value: '建築・土木・電気系学科卒業見込み' },
+      { label: '給与', value: salary },
+      { label: '勤務地', value: office },
+      { label: '休日', value: holiday },
+      { label: '対象', value: '2027年3月卒業見込みの方（学部不問）' },
     ],
   },
 ];
@@ -61,7 +79,7 @@ const jobs = [
 const benefits = [
   {
     title: '資格取得支援',
-    description: '1級施工管理技士などの受験費用・講習費用を全額補助。取得後の報奨金制度もあります。',
+    description: 'IT系資格・施工管理系資格の受験費用を補助。業務に役立つ資格の取得を後押しします。',
     icon: (
       <svg viewBox="0 0 48 48" fill="none">
         <path d="M24 8l4.5 9L38 18.5l-7 7L32.5 36 24 31.5 15.5 36l1.5-10.5-7-7 9.5-1.5z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
@@ -91,7 +109,7 @@ const benefits = [
   },
   {
     title: '残業月平均20h以下',
-    description: '業務効率化とICT活用で残業削減。月平均20時間以下の健全な就業環境を実現しています。',
+    description: '業務の効率化を自社でも実践。月平均20時間以下の健全な就業環境を実現しています。',
     icon: (
       <svg viewBox="0 0 48 48" fill="none">
         <path d="M24 8C15.163 8 8 15.163 8 24s7.163 16 16 16 16-7.163 16-16S32.837 8 24 8z" stroke="currentColor" strokeWidth="2.5" />
@@ -111,7 +129,7 @@ const benefits = [
   },
   {
     title: '研修制度充実',
-    description: '新人研修・OJT・ICT研修・安全教育など体系的な研修で着実なスキルアップを支援します。',
+    description: '新人研修・OJT・技術研修など、体系的な研修で着実なスキルアップを支援します。',
     icon: (
       <svg viewBox="0 0 48 48" fill="none">
         <path d="M24 8v32M12 20h24M16 14h16M14 26h20M16 32h16" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
@@ -180,7 +198,7 @@ export default function RecruitPage() {
       <PageHero
         label="RECRUIT"
         title="採用情報"
-        description="九州の建設業界を共に革新する仲間を募集しています。あなたの技術と熱意をここで活かしてください。"
+        description="ITの力で、企業と建設の現場を変えていく仲間を募集しています。"
         image={photos.heroRecruit}
       />
       <Breadcrumb current="採用情報" />
@@ -193,7 +211,7 @@ export default function RecruitPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={photos.recruitMessage}
-                alt="現場"
+                alt="PC作業をするエンジニア"
                 loading="lazy"
                 data-cursor-big
                 className="h-full w-full object-cover"
@@ -202,16 +220,16 @@ export default function RecruitPage() {
             <div>
               <LabelTag>MESSAGE FROM MANAGEMENT</LabelTag>
               <SectionTitle className="mb-4">
-                現場に誇りを、
+                技術で、
                 <br />
-                未来に情熱を。
+                現場を前へ。
               </SectionTitle>
               <Divider />
               <p className="mb-[14px] text-[15px] leading-[1.95] text-gray-600">
-                私たちが日々行っている施工管理の仕事は、地域の人々の暮らしを支える社会インフラを守ることです。一つひとつの現場で安全・品質・工期を守り抜くことが、街をつくることに直結しています。
+                私たちの仕事は、テクノロジーで企業の「働き方」を変えることです。業務の課題を見つけ、仕組みをつくり、現場で使われるところまで見届ける。その積み重ねが、お客様の成長に直結しています。
               </p>
               <p className="mb-[14px] text-[15px] leading-[1.95] text-gray-600">
-                九州建設テクノロジーでは、技術者一人ひとりが「プロフェッショナル」として成長できる環境を整えています。資格取得支援・ICT教育・メンター制度など、長期的なキャリアを見据えたサポートを充実させています。
+                そして私たちは、建設業の施工管理DXという、まだ誰も答えを出しきれていない領域に挑んでいます。エンジニアとしての技術を磨きたい方も、施工管理の経験をITで活かしたい方も、ここで一緒に挑戦しませんか。
               </p>
               <p className="mb-[14px] text-[15px] leading-[1.95] font-bold text-navy">
                 ぜひ、あなたのチカラをこの会社で発揮してください。
@@ -231,7 +249,7 @@ export default function RecruitPage() {
             <Divider />
           </Reveal>
 
-          <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-1">
+          <div className="grid grid-cols-2 gap-6 max-lg:grid-cols-1">
             {jobs.map((job, i) => (
               <Reveal
                 key={job.title}
@@ -333,7 +351,7 @@ export default function RecruitPage() {
                 <div
                   className={cn(
                     'relative z-[1] flex size-16 shrink-0 items-center justify-center rounded-full font-en text-lg font-black text-white shadow-[0_4px_12px_rgba(29,78,216,0.3)]',
-                    i === recruitFlow.length - 1 ? 'bg-gold' : 'bg-brand',
+                    i === recruitFlow.length - 1 ? 'bg-accent-grad' : 'bg-brand',
                   )}
                 >
                   {step.num}

@@ -140,7 +140,7 @@ export default function ContactPage() {
       <PageHero
         label="CONTACT"
         title="お問い合わせ"
-        description="施工管理に関するご相談・お見積もり・採用のご質問など、何でもお気軽にご連絡ください。"
+        description="DX・システム開発・SESのご相談、施工管理DXのご相談、採用のご質問など、お気軽にご連絡ください。"
         image={photos.heroContact}
       />
       <Breadcrumb current="お問い合わせ" />
@@ -158,7 +158,7 @@ export default function ContactPage() {
               </h2>
               <Divider />
               <p className="mb-9 text-[15px] leading-[1.9] text-gray-600">
-                施工管理全般に関するご質問・お見積もり依頼・採用についてなど、どんなことでもお問い合わせください。専任のスタッフが丁寧にご対応いたします。
+                「何から始めればいいかわからない」という段階でも大丈夫です。DX・システム開発・エンジニアのご依頼、採用についてなど、どんなことでもお問い合わせください。担当者が丁寧にご対応いたします。
               </p>
 
               <div className="flex flex-col gap-4">

@@ -7,51 +7,27 @@ import { photos } from '@/lib/images';
 const services = [
   {
     num: '01',
-    title: '建築施工管理',
-    image: photos.srvArchitecture,
+    title: 'DXコンサルティング',
+    image: photos.srvConsulting,
     description:
-      '住宅・商業施設・オフィスビルなど、あらゆる建築工事の施工管理を担当。品質・安全・工程・原価を総合的に管理します。',
-    items: ['住宅・マンション建設', '商業施設・オフィスビル', '公共建築物・改修工事'],
+      '業務の流れを整理し、どこをデジタル化すべきかを一緒に見極めます。ツール選定から導入、社内への定着まで伴走します。',
+    items: ['業務フローの可視化・課題整理', 'SaaS・ツールの選定と導入支援', 'DX推進体制づくり・定着支援'],
   },
   {
     num: '02',
-    title: '土木施工管理',
-    image: photos.srvCivil,
+    title: 'システム開発',
+    image: photos.srvDevelopment,
     description:
-      '道路・橋梁・河川・港湾など土木工事全般の施工管理。安全で長寿命な社会基盤を構築します。',
-    items: ['道路・橋梁工事', '河川・ダム・港湾工事', '造成・基礎・地盤改良'],
+      '業務システムやWebアプリケーションを、要件定義から設計・開発・運用保守まで一貫して手がけます。',
+    items: ['業務システム・Webアプリ開発', '既存システムの改修・保守', '要件定義・設計からの伴走'],
   },
   {
     num: '03',
-    title: '電気施工管理',
-    image: photos.srvElectric,
+    title: 'SES・エンジニア支援',
+    image: photos.srvSes,
     description:
-      '電力設備・通信設備・防災設備など電気工事の施工管理。省エネ・スマートビルディング対応も万全です。',
-    items: ['受変電・照明設備工事', '通信・LAN設備工事', '防災・セキュリティ設備'],
-  },
-  {
-    num: '04',
-    title: '管工事施工管理',
-    image: photos.srvPipe,
-    description:
-      '給排水・空調・ガス配管など管工事の施工管理。高い精度と品質で設備工事を管理・監督します。',
-    items: ['給排水衛生設備工事', '空調・換気設備工事', '消防・スプリンクラー設備'],
-  },
-  {
-    num: '05',
-    title: '品質管理・検査',
-    image: photos.srvQuality,
-    description:
-      '施工品質の確保に向けた徹底した品質管理。各工程での検査・試験を実施し、品質基準を確実に満たします。',
-    items: ['工程内・竣工品質検査', '材料・機器品質確認', '是正措置・改善指導'],
-  },
-  {
-    num: '06',
-    title: '安全管理・コンサルティング',
-    image: photos.srvSafety,
-    description:
-      '「ゼロ災害」を目指した安全管理体制の構築・運用。リスクアセスメントから安全教育まで包括支援。',
-    items: ['安全計画書作成・運用', 'リスクアセスメント', '安全教育・KY活動支援'],
+      'お客様のプロジェクトにエンジニアが参画し、開発・インフラ・プロジェクト推進を支えます。必要なスキルを、必要な期間だけ。',
+    items: ['アプリケーション開発', 'インフラ構築・運用', 'PMO・プロジェクト推進支援'],
   },
 ];
 
@@ -62,10 +38,10 @@ export function ServicesSection() {
         <Reveal className="mb-16 text-center">
           <LabelTag center>SERVICES</LabelTag>
           <SectionTitle>事業内容</SectionTitle>
-          <SectionSub>施工管理全般にわたる幅広いサービスを提供しています</SectionSub>
+          <SectionSub>DXの企画から開発・運用まで、3つのサービスで支えます</SectionSub>
         </Reveal>
 
-        <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-2 max-md:gap-[14px]">
+        <div className="grid grid-cols-3 gap-6 max-lg:grid-cols-1 max-lg:mx-auto max-lg:max-w-[560px] max-md:gap-[14px]">
           {services.map((service, i) => (
             <Reveal
               key={service.num}

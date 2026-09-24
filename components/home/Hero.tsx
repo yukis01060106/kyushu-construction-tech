@@ -2,26 +2,26 @@
 
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { LOADER_DONE_EVENT } from '@/components/home/Loader';
+import { HeroTerminal } from '@/components/home/HeroTerminal';
 import { Button } from '@/components/ui/Button';
 import { Counter } from '@/components/ui/Counter';
 import { cn } from '@/lib/cn';
 import { photos } from '@/lib/images';
 
 const titleLines = [
-  { text: '技術で、九州の', accent: false },
-  { text: '未来を建てる。', accent: true },
+  { text: 'テクノロジーで、', accent: false },
+  { text: '現場を前へ。', accent: true },
 ];
 
 const stats = [
-  { target: 7, unit: '県', label: '対応エリア' },
-  { target: 4, unit: '分野', label: '施工管理分野' },
-  { target: 4, unit: '管理', label: '品質・安全・工期・コスト' },
+  { target: 3, unit: '領域', label: 'DXコンサル・開発・SES' },
+  { target: 53, unit: '名', label: 'グループ人員' },
   { target: 2024, unit: '', label: '設立' },
 ];
 
 const heroOverlay =
-  'linear-gradient(to right, rgba(10,15,30,.88) 0%, rgba(10,15,30,.55) 60%, rgba(10,15,30,.3) 100%),' +
-  'linear-gradient(to top, rgba(10,15,30,.8) 0%, transparent 50%)';
+  'linear-gradient(to right, rgba(5,10,28,.93) 0%, rgba(7,18,48,.8) 55%, rgba(7,18,48,.62) 100%),' +
+  'linear-gradient(to top, rgba(5,10,28,.85) 0%, transparent 50%)';
 
 export function Hero() {
   const photoRef = useRef<HTMLImageElement>(null);
@@ -105,7 +105,7 @@ export function Hero() {
         <img
           ref={photoRef}
           src={photos.heroHome}
-          alt="建設現場の空撮"
+          alt="ノートPCを囲んで話し合う社員"
           fetchPriority="high"
           onLoad={() => setPhotoLoaded(true)}
           className={cn(
@@ -116,63 +116,67 @@ export function Hero() {
         <div className="absolute inset-0" style={{ background: heroOverlay }} />
       </div>
 
-      {/* 浮遊する幾何学図形 */}
+      {/* 方眼グリッドと光のにじみ */}
       <div className="pointer-events-none absolute inset-0 z-[1] overflow-hidden">
-        <div className="absolute top-[-80px] right-[-80px] size-[400px] animate-geo-float rounded-full border border-white/6 [animation-duration:18s]" />
-        <div className="absolute top-[20%] right-[15%] size-[250px] animate-geo-float rounded-full border border-white/6 [animation-direction:reverse] [animation-duration:22s]" />
-        <div className="absolute right-[8%] bottom-[15%] size-[160px] animate-geo-float rounded-full border border-white/6 opacity-50 [animation-duration:14s]" />
+        <div className="bg-tech-grid absolute inset-0" />
+        <div className="absolute top-[10%] right-[5%] size-[520px] rounded-full bg-brand/30 blur-[120px]" />
+        <div className="absolute bottom-[5%] left-[-5%] size-[420px] rounded-full bg-gold/15 blur-[120px]" />
       </div>
 
-      {/* 下端の金ライン */}
+      {/* 下端のアクセントライン */}
       <div className="absolute bottom-0 left-0 z-[3] h-px w-full bg-gradient-to-r from-gold to-transparent opacity-40" />
 
-      <div className="relative z-[2] mx-auto w-full max-w-[1160px] px-6 pt-[120px] pb-[180px]">
-        <div className="mb-7 inline-flex animate-fade-down items-center gap-[10px] rounded-full border border-white/20 bg-white/10 px-[18px] py-2 text-[13px] font-semibold tracking-[0.04em] text-white/90 backdrop-blur-[8px]">
-          <span className="size-2 animate-dot-pulse rounded-full bg-gold shadow-[0_0_0_3px_rgba(245,158,11,0.3)]" />
-          <span>建設 × DX × AI</span>
+      <div className="relative z-[2] mx-auto grid w-full max-w-[1160px] grid-cols-[1.15fr_1fr] items-center gap-12 px-6 pt-[120px] pb-[140px] max-lg:grid-cols-1 max-lg:pb-[180px]">
+        <div>
+          <div className="mb-7 inline-flex animate-fade-down items-center gap-[10px] rounded-full border border-white/20 bg-white/10 px-[18px] py-2 font-mono text-[12px] font-medium tracking-[0.06em] text-white/90 backdrop-blur-[8px] max-xs:text-[10px]">
+            <span className="size-2 animate-dot-pulse rounded-full bg-gold shadow-[0_0_0_3px_rgba(34,211,238,0.3)]" />
+            <span>DX × SYSTEM DEVELOPMENT × CONSTRUCTION TECH</span>
+          </div>
+
+          <h1
+            ref={titleRef}
+            className="mb-7 flex flex-col text-[clamp(2.4rem,5vw,4.2rem)] leading-[1.2] font-black tracking-[-0.03em]"
+          >
+            {titleLines.map((line, i) => (
+              <span
+                key={line.text}
+                data-line
+                className={cn(
+                  'block animate-fade-up',
+                  line.accent ? 'text-gold' : 'text-white',
+                )}
+                style={{ animationDelay: `${i * 0.1}s` }}
+              >
+                {line.text}
+              </span>
+            ))}
+          </h1>
+
+          <p
+            className="mb-11 animate-fade-up text-[clamp(1rem,1.4vw,1.1rem)] leading-[1.9] text-white/78"
+            style={{ animationDelay: '0.3s' }}
+          >
+            DXコンサルティングとシステム開発で、企業の業務変革を支援。
+            <br />
+            施工管理の現場を知るエンジニアとして、
+            <br className="max-md:hidden" />
+            建設業のDXに本気で取り組みます。
+          </p>
+
+          <div className="flex animate-fade-up flex-col gap-4 xs:flex-row xs:flex-wrap" style={{ animationDelay: '0.4s' }}>
+            <Button href="#services" variant="gold" className="w-full justify-center xs:w-auto">
+              <span>事業内容を見る</span>
+              <svg viewBox="0 0 20 20" fill="none">
+                <path d="M5 10H15M10 5l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </Button>
+            <Button href="/contact/" variant="ghost" className="w-full justify-center xs:w-auto">
+              お問い合わせ
+            </Button>
+          </div>
         </div>
 
-        <h1
-          ref={titleRef}
-          className="mb-7 flex flex-col font-serif text-[clamp(2.6rem,6vw,5rem)] leading-[1.25] font-bold"
-        >
-          {titleLines.map((line, i) => (
-            <span
-              key={line.text}
-              data-line
-              className={cn(
-                'block animate-fade-up',
-                line.accent ? 'text-gold' : 'text-white',
-              )}
-              style={{ animationDelay: `${i * 0.1}s` }}
-            >
-              {line.text}
-            </span>
-          ))}
-        </h1>
-
-        <p
-          className="mb-11 animate-fade-up text-[clamp(1rem,1.4vw,1.1rem)] leading-[1.9] text-white/78"
-          style={{ animationDelay: '0.3s' }}
-        >
-          建築・土木・電気・管工事、あらゆる施工管理に対応。
-          <br />
-          DX・AIを活用した確かな技術力で、
-          <br className="max-md:hidden" />
-          百年先の街並みを見据えたものづくりを続けます。
-        </p>
-
-        <div className="flex animate-fade-up flex-col gap-4 xs:flex-row xs:flex-wrap" style={{ animationDelay: '0.4s' }}>
-          <Button href="#services" variant="gold" className="w-full justify-center xs:w-auto">
-            <span>事業内容を見る</span>
-            <svg viewBox="0 0 20 20" fill="none">
-              <path d="M5 10H15M10 5l5 5-5 5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </Button>
-          <Button href="/contact/" variant="ghost" className="w-full justify-center xs:w-auto">
-            お問い合わせ
-          </Button>
-        </div>
+        <HeroTerminal className="animate-fade-up [animation-delay:0.5s] max-lg:hidden" />
       </div>
 
       {/* 数値バー */}

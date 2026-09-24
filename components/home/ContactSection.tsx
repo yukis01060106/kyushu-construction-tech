@@ -50,7 +50,7 @@ export function ContactSection() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={photos.contactBg}
-          alt="建設現場"
+          alt="オフィス"
           loading="lazy"
           className="h-full w-full object-cover object-[center_70%]"
         />

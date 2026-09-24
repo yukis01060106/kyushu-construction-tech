@@ -4,25 +4,24 @@ import { Field, FieldRow, Honeypot, Input, RequiredBadge, Select, Textarea } fro
 import { FormResult, SubmitButton } from '@/components/forms/FormFeedback';
 import { useContactForm } from '@/lib/useContactForm';
 
-const prefectures = ['福岡県', '佐賀県', '長崎県', '熊本県', '大分県', '宮崎県', '鹿児島県', '沖縄県', 'その他'];
+const regions = ['北海道・東北', '関東', '中部', '近畿', '中国・四国', '九州・沖縄', '海外・その他'];
 
 const subjects = [
-  '建築施工管理について',
-  '土木施工管理について',
-  '電気施工管理について',
-  '管工事施工管理について',
-  '安全管理コンサルティングについて',
+  'DXコンサルティングについて',
+  'システム開発のご相談',
+  'SES・エンジニアのご依頼',
+  '施工管理DXについて',
+  '施工管理業務について',
   'お見積もり依頼',
   '採用について',
   'その他',
 ];
 
 const budgets = [
-  '〜500万円',
-  '500万〜1,000万円',
-  '1,000万〜5,000万円',
-  '5,000万〜1億円',
-  '1億円以上',
+  '〜100万円',
+  '100万〜300万円',
+  '300万〜1,000万円',
+  '1,000万円以上',
   '未定・相談したい',
 ];
 
@@ -66,11 +65,12 @@ export function FullContactForm({ className }: { className?: string }) {
         </Field>
       </FieldRow>
 
-      <Field label="都道府県" htmlFor="cpf-prefecture">
-        <Select id="cpf-prefecture" name="prefecture" defaultValue="">
+      {/* contact.php は prefecture の名前で受け取る */}
+      <Field label="地域" htmlFor="cpf-region">
+        <Select id="cpf-region" name="prefecture" defaultValue="">
           <option value="">選択してください</option>
-          {prefectures.map((pref) => (
-            <option key={pref}>{pref}</option>
+          {regions.map((region) => (
+            <option key={region}>{region}</option>
           ))}
         </Select>
       </Field>
@@ -99,7 +99,7 @@ export function FullContactForm({ className }: { className?: string }) {
           name="message"
           rows={6}
           required
-          placeholder={'ご相談内容をできるだけ詳しくご記入ください。\n（例）工事の種別・規模・場所・希望工期など'}
+          placeholder={'ご相談内容をできるだけ詳しくご記入ください。\n（例）現在の課題・対象の業務・ご希望の時期など'}
         />
       </Field>
 

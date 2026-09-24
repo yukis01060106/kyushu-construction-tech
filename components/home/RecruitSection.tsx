@@ -9,8 +9,8 @@ import { photos } from '@/lib/images';
 const points = [
   {
     num: '01',
-    title: '資格取得支援制度',
-    description: '受験費用・講習費用を全額補助。1級施工管理技士取得者には報奨金あり。',
+    title: '資格取得・スキルアップ支援',
+    description: 'IT系資格・施工管理系資格の受験費用を補助。技術研修で着実な成長を支えます。',
   },
   {
     num: '02',
@@ -25,9 +25,10 @@ const points = [
 ];
 
 const jobs = [
-  { badge: '正社員', tone: 'bg-[#dcfce7] text-[#16a34a]', label: '施工管理技術者' },
-  { badge: '中途', tone: 'bg-[#dbeafe] text-[#1d4ed8]', label: '現場監督（経験者優遇）' },
-  { badge: '新卒', tone: 'bg-[#fef9c3] text-[#a16207]', label: '施工管理職（建築・土木系）' },
+  { badge: '中途', tone: 'bg-[#dbeafe] text-[#1d4ed8]', label: 'システムエンジニア・プログラマー' },
+  { badge: '中途', tone: 'bg-[#dbeafe] text-[#1d4ed8]', label: 'DXコンサルタント・PM' },
+  { badge: '経験者', tone: 'bg-[#dcfce7] text-[#16a34a]', label: '建設DXスペシャリスト（施工管理経験者）' },
+  { badge: '新卒', tone: 'bg-[#fef9c3] text-[#a16207]', label: 'ITエンジニア・コンサルタント職' },
 ];
 
 export function RecruitSection() {
@@ -42,7 +43,7 @@ export function RecruitSection() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={photos.recruitMain}
-              alt="現場作業員"
+              alt="笑顔でPC作業するエンジニア"
               loading="lazy"
               data-cursor-big
               className="h-full w-full object-cover object-top"
@@ -59,12 +60,12 @@ export function RecruitSection() {
           <Reveal variant="right" className="pb-8">
             <LabelTag>RECRUIT</LabelTag>
             <h2 className="mt-[6px] mb-5 text-[clamp(1.8rem,2.8vw,2.5rem)] font-black tracking-[-0.03em] text-navy">
-              共に九州の
+              ITの力で、
               <br />
-              建設業界を変えよう
+              建設の現場を変えよう
             </h2>
             <p className="mb-[14px] text-[15px] leading-[1.95] text-gray-600">
-              施工管理のプロフェッショナルとして活躍できる環境をご用意しています。未経験者も歓迎。資格取得支援・充実した研修制度であなたの成長をサポートします。
+              エンジニア・コンサルタントとして、さまざまな業界のDXに携われる環境です。施工管理の経験を活かしてIT領域へ挑戦したい方も歓迎します。
             </p>
 
             <div className="my-7 flex flex-col gap-5">

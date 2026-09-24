@@ -57,8 +57,9 @@ export function CtaBand({
   secondary: { href: string; label: string };
 }) {
   return (
-    <div className="bg-[linear-gradient(135deg,#0a0f1e_0%,#1e3a8a_100%)] py-20 text-center">
-      <Container>
+    <div className="relative overflow-hidden bg-[linear-gradient(135deg,#0a0f1e_0%,#1e3a8a_100%)] py-20 text-center">
+      <div className="bg-tech-grid pointer-events-none absolute inset-0" />
+      <Container className="relative">
         <h2 className="mb-4 text-[clamp(1.8rem,3vw,2.6rem)] font-black tracking-[-0.03em] text-white">
           {title}
         </h2>

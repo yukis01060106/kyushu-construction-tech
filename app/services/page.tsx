@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { Breadcrumb, PageHero } from '@/components/ui/PageHero';
 import { Reveal } from '@/components/ui/Reveal';
@@ -10,78 +11,59 @@ import { photos } from '@/lib/images';
 export const metadata: Metadata = {
   title: '事業内容',
   description:
-    '九州建設テクノロジーの事業内容。建築・土木・電気・管工事の施工管理から安全管理コンサルティングまで。',
+    '九州建設テクノロジーの事業内容。DXコンサルティング・システム開発・SES、そして注力領域である施工管理DXをご紹介します。',
 };
 
 const services = [
   {
     num: 'SERVICE 01',
-    title: '建築施工管理',
-    image: photos.srvDetailArchitecture,
+    title: 'DXコンサルティング',
+    image: photos.srvDetailConsulting,
     paragraphs: [
-      '住宅・マンション・商業施設・オフィスビルなど、あらゆる建築工事の施工管理を担当します。設計図書に基づき、品質・安全・工程・原価の4管理を徹底し、お客様の理想を形にします。',
-      'BIM（建築情報モデリング）を活用し、3次元モデルによる施工シミュレーションや干渉チェックを実施。設計変更への迅速な対応と施工品質の向上を両立しています。',
+      '「DXを進めたいが、何から手をつければいいかわからない」。そんな段階からご相談ください。現場へのヒアリングで業務の流れと課題を洗い出し、デジタル化すべき業務と優先順位を整理します。',
+      '既存のSaaSで解決できるならツールの選定と導入を、独自の仕組みが必要ならシステムの企画を。導入後も、社内に定着するまで運用ルールづくりや改善を一緒に進めます。',
     ],
-    tags: ['住宅・マンション', '商業施設', 'オフィスビル', '公共建築物', '改修・リノベーション'],
+    tags: ['業務フロー可視化', '課題整理・優先順位づけ', 'ツール選定・導入', 'DX推進体制づくり', '定着・改善支援'],
   },
   {
     num: 'SERVICE 02',
-    title: '土木施工管理',
-    image: photos.srvDetailCivil,
+    title: 'システム開発',
+    image: photos.srvDetailDevelopment,
     paragraphs: [
-      '道路・橋梁・河川・港湾・ダムなど土木工事全般の施工管理を行います。地域インフラの整備・維持に貢献し、安全で長寿命な社会基盤を構築します。',
-      'ドローン測量・3Dスキャナー・TS（トータルステーション）などICT建機を活用したスマート施工により、高精度な出来形管理と効率化を実現しています。',
+      '業務システムやWebアプリケーションを、要件定義・設計から開発・テスト・運用保守まで一貫して手がけます。お客様の業務に合わせたオーダーメイドの仕組みをつくります。',
+      'Excelや紙で回している業務のシステム化、古くなった既存システムの改修・刷新にも対応。最初から大きくつくり込まず、効果の出る範囲から段階的に開発します。',
     ],
-    tags: ['道路・舗装工事', '橋梁・トンネル', '河川・ダム', '港湾・海岸', '造成・地盤改良'],
+    tags: ['業務システム', 'Webアプリケーション', '既存システム改修', '要件定義・設計', '運用保守'],
   },
   {
     num: 'SERVICE 03',
-    title: '電気施工管理',
-    image: photos.srvDetailElectric,
+    title: 'SES・エンジニア支援',
+    image: photos.srvDetailSes,
     paragraphs: [
-      '受変電設備・電灯コンセント設備・通信設備・防災設備など電気工事の施工管理を行います。省エネ・スマートビルディングへの対応も万全で、最新の電気設備工事に対応します。',
-      'BEMS（ビルエネルギー管理システム）や太陽光発電・蓄電池システムなど、再生可能エネルギーを活用したゼロエネルギービル（ZEB）対応工事にも積極的に取り組んでいます。',
+      'お客様の開発プロジェクトに、当社のエンジニアが参画します。アプリケーション開発からインフラの構築・運用、プロジェクト推進（PMO）まで、必要なスキルを必要な期間だけご提供します。',
+      '「人手が足りない」「特定の技術を持つメンバーがほしい」といったご要望に、グループのネットワークも活かして柔軟にお応えします。',
     ],
-    tags: ['受変電設備', '照明・コンセント', '通信・LAN設備', '防災・警報設備', '太陽光・蓄電池'],
+    tags: ['アプリケーション開発', 'インフラ構築・運用', 'テスト・品質保証', 'PMO', 'プロジェクト推進'],
   },
   {
-    num: 'SERVICE 04',
-    title: '管工事施工管理',
-    image: photos.srvDetailPipe,
+    num: 'FOCUS',
+    title: '施工管理DX',
+    image: photos.srvDetailConstructionDx,
     paragraphs: [
-      '給排水・衛生・空調・換気・ガス配管など管工事の施工管理を行います。快適な生活・労働環境を支える設備工事を、高い精度と品質で管理・監督します。',
-      '病院・ホテル・集合住宅など衛生管理が特に重要な施設での実績も多数。稼働中の建物での改修工事においても、運営への影響を最小限に抑えた施工計画を立案します。',
+      '私たちが次の柱として注力しているのが、建設業の施工管理DXです。施工管理の現場で得た知見とシステム開発の技術をかけ合わせ、書類・写真・工程・日報など、現場に残るアナログな業務のデジタル化に取り組んでいます。',
+      '建設会社様の業務改善のご相談から、共同での検証（PoC）まで。現場を知る私たちだからこそできるDXを、一緒に形にしていきます。',
     ],
-    tags: ['給排水衛生設備', '空調・換気設備', 'ガス配管', '消防・スプリンクラー', '医療ガス設備'],
-  },
-  {
-    num: 'SERVICE 05',
-    title: '品質管理・検査',
-    image: photos.srvDetailQuality,
-    paragraphs: [
-      '施工品質の確保に向けた徹底した品質管理を行います。各工程での検査・試験を実施し、設計図書・仕様書に基づく品質基準を確実に満たします。',
-      '社内品質管理システムに基づく工程内検査・受入検査・完成検査を実施。不具合発見時の是正措置・改善指導まで一貫してサポートします。',
-    ],
-    tags: ['工程内品質検査', '材料受入検査', '竣工・完成検査', '是正措置対応', '品質記録管理'],
-  },
-  {
-    num: 'SERVICE 06',
-    title: '安全管理・コンサルティング',
-    image: photos.srvDetailSafety,
-    paragraphs: [
-      '「ゼロ災害」を目標に、安全管理体制の構築・運用を支援します。リスクアセスメントから日常の安全パトロール、安全教育まで包括的にサポートします。',
-      '労働安全衛生法に基づく安全衛生計画の策定・実施から、安全文化の醸成・定着まで、企業全体の安全レベル向上をトータルでコンサルティングします。',
-    ],
-    tags: ['安全計画書作成', 'リスクアセスメント', '安全パトロール', '安全教育・KY', '労災防止コンサル'],
+    tags: ['書類・帳票の電子化', '写真・工程管理', '日報・安全書類', '現場の見える化', '建設会社様向けDX支援'],
+    link: { href: '/construction-dx/', label: '施工管理DXについて詳しく →' },
   },
 ];
 
 const flow = [
-  { num: '01', title: ['ご相談・', 'お問い合わせ'], description: 'まずはお電話・メール・フォームにてお気軽にご相談ください' },
-  { num: '02', title: ['現場調査・', 'ヒアリング'], description: '現地調査と詳細ヒアリングにより、最適なプランを検討します' },
-  { num: '03', title: ['ご提案・', 'お見積もり'], description: '施工管理計画書と見積書を作成し、内容をご説明します' },
-  { num: '04', title: ['契約・', '施工管理開始'], description: 'ご契約後、担当技術者を配置し施工管理業務を開始します' },
-  { num: '05', title: ['竣工・', 'アフターフォロー'], description: '完成検査・引渡し後も継続的なサポートを提供します' },
+  { num: '01', title: ['ご相談・', 'お問い合わせ'], description: 'まだ課題が漠然としている段階でも、お気軽にご相談ください' },
+  { num: '02', title: ['ヒアリング・', '課題整理'], description: '業務の流れや現場の声を伺い、課題と優先順位を整理します' },
+  { num: '03', title: ['ご提案・', 'お見積もり'], description: '進め方・体制・費用をご提案し、内容をご説明します' },
+  { num: '04', title: ['開発・導入・', 'エンジニア参画'], description: 'ご契約後、担当チームを編成してプロジェクトを開始します' },
+  { num: '05', title: ['運用・', '定着支援'], description: '導入後も改善を重ね、社内に定着するまで伴走します' },
 ];
 
 export default function ServicesPage() {
@@ -90,7 +72,7 @@ export default function ServicesPage() {
       <PageHero
         label="SERVICES"
         title="事業内容"
-        description="建築・土木・電気・管工事の施工管理全般を手がける、九州のプロフェッショナル集団です。"
+        description="DXコンサルティング・システム開発・SESで、企業の業務変革を支援します。"
         image={photos.heroServices}
       />
       <Breadcrumb current="事業内容" />
@@ -99,9 +81,9 @@ export default function ServicesPage() {
         <Container>
           <Reveal className="mb-16">
             <LabelTag>SERVICE LIST</LabelTag>
-            <SectionTitle>6つのサービス</SectionTitle>
+            <SectionTitle>3つのサービスと、注力領域</SectionTitle>
             <Divider />
-            <SectionSub className="mt-0">施工管理全般にわたる幅広いサービスを提供しています</SectionSub>
+            <SectionSub className="mt-0">DXの企画から開発・運用まで。そして、施工管理DXへ</SectionSub>
           </Reveal>
 
           {services.map((service, i) => {
@@ -126,7 +108,12 @@ export default function ServicesPage() {
                   />
                 </div>
                 <div className={cn('max-lg:order-none', reverse && 'order-1')}>
-                  <p className="mb-3 font-en text-[11px] font-extrabold tracking-[0.2em] text-brand-light">
+                  <p
+                    className={cn(
+                      'mb-3 font-en text-[11px] font-extrabold tracking-[0.2em]',
+                      service.link ? 'text-gold-dark' : 'text-brand-light',
+                    )}
+                  >
                     {service.num}
                   </p>
                   <h2 className="mb-5 text-[clamp(1.6rem,2.5vw,2.1rem)] font-black tracking-[-0.03em] text-navy">
@@ -148,6 +135,11 @@ export default function ServicesPage() {
                       </span>
                     ))}
                   </div>
+                  {service.link && (
+                    <Button href={service.link.href} variant="primary" className="mt-8">
+                      {service.link.label}
+                    </Button>
+                  )}
                 </div>
               </Reveal>
             );
@@ -162,7 +154,7 @@ export default function ServicesPage() {
             <LabelTag>PROCESS</LabelTag>
             <SectionTitle>業務の流れ</SectionTitle>
             <Divider />
-            <SectionSub className="mt-0">お問い合わせから施工完了まで、丁寧にサポートします</SectionSub>
+            <SectionSub className="mt-0">ご相談から運用・定着まで、一貫してサポートします</SectionSub>
           </Reveal>
 
           <Reveal className="relative grid grid-cols-1 gap-6 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-0 lg:before:absolute lg:before:top-9 lg:before:right-[10%] lg:before:left-[10%] lg:before:h-[2px] lg:before:bg-gray-200 lg:before:content-['']">
@@ -184,9 +176,9 @@ export default function ServicesPage() {
       </PageSection>
 
       <CtaBand
-        title="施工管理のご相談はお気軽に"
-        description="まずはお問い合わせフォームよりご連絡ください。専門スタッフがご対応します。"
-        primary={{ href: '/contact/', label: '無料相談・お見積もり →' }}
+        title="DX・システム開発のご相談はお気軽に"
+        description="課題が整理できていない段階でも大丈夫です。まずはお問い合わせフォームよりご連絡ください。"
+        primary={{ href: '/contact/', label: '無料で相談する →' }}
         secondary={{ href: '/works/', label: '対応事例を見る' }}
       />
     </>

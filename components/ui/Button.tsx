@@ -8,7 +8,7 @@ const base =
   'relative overflow-hidden inline-flex items-center gap-2 rounded-md border-2 border-transparent px-8 py-[15px] font-jp text-[15px] font-bold tracking-[0.02em] transition-all duration-300 ease-brand cursor-pointer [&_svg]:size-[18px] [&_svg]:shrink-0';
 
 const variants: Record<Variant, string> = {
-  gold: 'bg-gold text-white border-gold hover:bg-gold-dark hover:border-gold-dark hover:-translate-y-[3px] hover:shadow-[0_10px_24px_rgba(245,158,11,0.45)]',
+  gold: 'bg-accent-grad text-white border-transparent hover:brightness-110 hover:-translate-y-[3px] hover:shadow-[0_10px_24px_rgba(34,211,238,0.45)]',
   ghost:
     'bg-transparent text-white border-white/45 hover:bg-white/12 hover:border-white hover:-translate-y-[3px]',
   primary:

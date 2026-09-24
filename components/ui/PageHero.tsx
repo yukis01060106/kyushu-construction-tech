@@ -26,10 +26,11 @@ export function PageHero({
       <div className="absolute inset-0">
         <ZoomPhoto src={image} alt={title} priority className="object-[center_40%]" />
         <div className="absolute inset-0" style={{ background: overlay }} />
+        <div className="bg-tech-grid absolute inset-0" />
       </div>
       <div className="relative z-2 mx-auto w-full max-w-[1160px] px-6 pb-14">
         <LabelTag tone="gold">{label}</LabelTag>
-        <h1 className="mb-[14px] font-serif text-[clamp(2.2rem,4.5vw,3.6rem)] leading-[1.3] font-bold text-white">
+        <h1 className="mb-[14px] text-[clamp(2.1rem,4.2vw,3.4rem)] font-black tracking-[-0.02em] leading-[1.3] text-white">
           {title}
         </h1>
         <p className="max-w-[520px] text-[15px] leading-[1.85] text-white/70">{description}</p>

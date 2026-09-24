@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 
 const philosophy = [
   {
-    title: '品質への誠実',
+    title: '現場から考える',
     description:
-      'すべての工事において、設計仕様と品質基準を厳守します。「手を抜かない」を合言葉に、一つひとつの工程を丁寧に積み重ねます。',
+      '答えは会議室ではなく現場にあります。実際に働く人の声を聞き、業務の流れを自分の目で確かめてから、仕組みを考えます。',
     icon: (
       <svg viewBox="0 0 48 48" fill="none">
         <path d="M24 6l4.5 9L38 16.5l-7 7 1.5 10L24 29l-8.5 4.5 1.5-10-7-7 9.5-1.5z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
@@ -25,9 +25,9 @@ const philosophy = [
     ),
   },
   {
-    title: '人を守る安全',
+    title: '使われる技術をつくる',
     description:
-      '働く人の命と健康を最優先に考えます。ゼロ災害を目標に、徹底した安全管理と現場教育を通じて、安心できる職場環境をつくります。',
+      'システムは使われてはじめて価値を持ちます。見た目の新しさより、毎日の業務で無理なく使い続けられることを大切にします。',
     icon: (
       <svg viewBox="0 0 48 48" fill="none">
         <circle cx="24" cy="18" r="8" stroke="currentColor" strokeWidth="2.5" />
@@ -36,9 +36,9 @@ const philosophy = [
     ),
   },
   {
-    title: '地域への貢献',
+    title: '最後まで伴走する',
     description:
-      '九州の社会インフラと建設環境を支え、地域の発展に貢献します。次世代へ誇れるものづくりを、九州の地から世界へ発信していきます。',
+      '導入して終わりにはしません。社内に定着し、成果が出るまで、お客様のチームの一員として改善を重ねていきます。',
     icon: (
       <svg viewBox="0 0 48 48" fill="none">
         <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" strokeWidth="2.5" />
@@ -56,7 +56,7 @@ const corpRows = [
   { label: '本社所在地', value: `${site.zip}　${site.address}` },
   { label: 'TEL / FAX', value: `TEL：${site.tel}　／　FAX：${site.fax}` },
   { label: '営業時間', value: `${site.businessHours}（${site.businessHoursNote}）` },
-  { label: '事業内容', value: '建築・土木・電気・管工事の施工管理業務全般、安全管理コンサルティング' },
+  { label: '事業内容', value: 'DXコンサルティング、システム開発（受託開発・SES）、施工管理DX支援、施工管理業務' },
 ];
 
 const career = [
@@ -76,14 +76,14 @@ const history = [
   { year: '2024.08', title: '法人設立', description: '法人を設立。' },
   {
     year: '2026.07',
-    title: '商号変更・施工管理事業を本格始動',
+    title: '商号変更・建設領域へ進出',
     description:
-      '商号を「株式会社九州建設テクノロジー」に変更。経験豊富な技術者を迎え、建築・土木・電気・管工事の施工管理事業をスタート。',
+      '商号を「株式会社九州建設テクノロジー」に変更。施工管理事業を開始し、建設業の現場に根ざしたDXへの取り組みをスタート。',
   },
   {
     year: '2026.08',
     title: 'コーポレートサイト公開',
-    description: '九州の建設現場をテクノロジーで支えるべく、コーポレートサイトを公開。',
+    description: 'コーポレートサイトを公開。',
   },
 ];
 
@@ -93,7 +93,7 @@ export default function AboutPage() {
       <PageHero
         label="ABOUT US"
         title="会社概要"
-        description="2024年の設立以来、経験豊富な技術者とDX・AIの力で、九州の建設現場を支えていきます。"
+        description="DXコンサルティングとシステム開発を軸に、施工管理DXに挑むテクノロジーカンパニーです。"
         image={photos.heroAbout}
       />
       <Breadcrumb current="会社概要" />
@@ -236,7 +236,7 @@ export default function AboutPage() {
         <Container>
           <Reveal className="mb-16">
             <LabelTag>GALLERY</LabelTag>
-            <SectionTitle>現場の様子</SectionTitle>
+            <SectionTitle>私たちの仕事</SectionTitle>
             <Divider />
           </Reveal>
 
@@ -246,7 +246,7 @@ export default function AboutPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={src}
-                  alt={`現場${i + 1}`}
+                  alt={`仕事の様子${i + 1}`}
                   loading="lazy"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
@@ -258,7 +258,7 @@ export default function AboutPage() {
 
       <CtaBand
         title="まずはお気軽にご相談ください"
-        description="施工管理に関するお問い合わせ・お見積もりはこちらから"
+        description="DX・システム開発・施工管理DXに関するご相談はこちらから"
         primary={{ href: '/contact/', label: 'お問い合わせ →' }}
         secondary={{ href: '/services/', label: '事業内容を見る' }}
       />

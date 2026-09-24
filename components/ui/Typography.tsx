@@ -16,18 +16,19 @@ export function LabelTag({
   return (
     <p
       className={cn(
-        'mb-[14px] font-en text-[11px] font-bold tracking-[0.2em] uppercase',
+        'mb-[14px] font-mono text-[11px] font-bold tracking-[0.18em] uppercase',
         tone === 'gold' ? 'text-gold' : 'text-brand',
         center ? 'block' : 'inline-block',
         className,
       )}
     >
+      <span className="mr-[0.5em] opacity-50">{'//'}</span>
       {children}
     </p>
   );
 }
 
-/** セクション見出し（明朝体） */
+/** セクション見出し（太いゴシック体） */
 export function SectionTitle({
   as: Tag = 'h2',
   white,
@@ -42,7 +43,7 @@ export function SectionTitle({
   return (
     <Tag
       className={cn(
-        'font-serif text-[clamp(2rem,3.5vw,3rem)] leading-[1.3] font-bold',
+        'text-[clamp(1.9rem,3.2vw,2.8rem)] leading-[1.35] font-black tracking-[-0.02em]',
         white ? 'text-white' : 'text-navy',
         className,
       )}

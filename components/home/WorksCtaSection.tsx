@@ -5,8 +5,8 @@ import { LabelTag, SectionSub, SectionTitle } from '@/components/ui/Typography';
 import { photos } from '@/lib/images';
 
 const stats = [
-  { value: '7', unit: '県', label: '対応エリア' },
-  { value: '4', unit: '分野', label: '施工管理分野' },
+  { value: '3', unit: '領域', label: 'DXコンサル・開発・SES' },
+  { value: '1', unit: 'つ', label: '注力領域：施工管理DX' },
   { value: '2024', unit: '', label: '設立' },
 ];
 
@@ -17,7 +17,7 @@ export function WorksCtaSection() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={photos.worksCtaBg}
-          alt="対応事例"
+          alt="データセンター"
           loading="lazy"
           className="h-full w-full object-cover object-[center_55%]"
         />
@@ -31,9 +31,9 @@ export function WorksCtaSection() {
           </LabelTag>
           <SectionTitle white>対応事例</SectionTitle>
           <SectionSub white className="mx-auto max-w-[560px]">
-            建築・土木・電気・管工事、九州7県に対応できる体制を整えています。
+            業務改善のコンサルティングからシステム開発、エンジニア参画まで。
             <br className="max-md:hidden" />
-            対応可能な工事分野の例を対応事例ページでご紹介しています。
+            対応可能な案件の例を対応事例ページでご紹介しています。
           </SectionSub>
 
           <div className="my-10 mb-11 flex flex-wrap justify-center gap-14 max-md:my-8 max-md:mb-9 max-md:gap-8">

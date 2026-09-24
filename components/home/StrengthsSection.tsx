@@ -5,9 +5,9 @@ import { photos } from '@/lib/images';
 
 const strengths = [
   {
-    title: '高度有資格者による専門チーム',
+    title: '現場を知るエンジニア',
     description:
-      '1級施工管理技士をはじめ各専門分野の有資格者が在籍。豊富な現場経験と専門知識で複雑な工事案件にも対応。',
+      '施工管理の現場に立ってきたメンバーが在籍。現場の言葉で課題を理解し、机上ではなく実際に使われるシステムを設計します。',
     icon: (
       <svg viewBox="0 0 48 48" fill="none">
         <circle cx="24" cy="24" r="18" stroke="currentColor" strokeWidth="2" />
@@ -16,9 +16,9 @@ const strengths = [
     ),
   },
   {
-    title: 'DX・AIを活用したスマート管理',
+    title: '企画から開発・運用まで一気通貫',
     description:
-      'ドローン測量・BIM/CIM・AIによる画像解析や施工管理アプリなど、最新のDX・AI技術を積極活用。データに基づく精度の高い管理とリアルタイム情報共有を実現。',
+      '課題整理・要件定義から、設計・開発、導入後の運用保守まで一つのチームで対応。フェーズごとに窓口が変わる手間がありません。',
     icon: (
       <svg viewBox="0 0 48 48" fill="none">
         <rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" strokeWidth="2" />
@@ -27,9 +27,9 @@ const strengths = [
     ),
   },
   {
-    title: '九州全域をカバーする対応力',
+    title: '状況に合わせた柔軟な体制',
     description:
-      '福岡を拠点に九州7県に対応可能。地元密着の強みを活かしつつ広域案件にも迅速対応。緊急時のサポート体制も万全です。',
+      'コンサルティング・受託開発・SESを組み合わせ、お客様の予算や体制に合った関わり方をご提案。必要なスキルを必要な期間だけ提供します。',
     icon: (
       <svg viewBox="0 0 48 48" fill="none">
         <circle cx="24" cy="20" r="8" stroke="currentColor" strokeWidth="2" />
@@ -38,9 +38,9 @@ const strengths = [
     ),
   },
   {
-    title: '経験豊富な技術者による確かな実行力',
+    title: '小さく始めて、定着まで伴走',
     description:
-      '会社としては新しいスタートですが、集まる技術者は皆、現場最前線で培った知識と経験を持つプロフェッショナル。確かな品質と対応力をお約束します。',
+      'いきなり大きなシステムはつくりません。効果の出やすい業務から小さく始め、現場の声を聞きながら改善を重ねて定着させます。',
     icon: (
       <svg viewBox="0 0 48 48" fill="none">
         <path d="M24 8l4 8 9 1.5-6.5 6.5 1.5 9L24 29l-8 4 1.5-9L11 17.5l9-1.5z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
@@ -56,12 +56,13 @@ export function StrengthsSection() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={photos.strengthsBg}
-          alt="建設現場"
+          alt="オフィス街"
           loading="lazy"
           data-cursor-big
           className="h-full w-full object-cover object-[center_60%]"
         />
         <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(10,15,30,0.93)_0%,rgba(29,78,216,0.82)_100%)]" />
+        <div className="bg-tech-grid absolute inset-0" />
       </div>
 
       <Container className="relative z-[1]">

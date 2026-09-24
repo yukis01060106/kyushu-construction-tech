@@ -204,7 +204,7 @@ export function SiteEffects() {
         >
           <Link
             href="/contact/"
-            className="flex size-16 flex-col items-center justify-center rounded-full bg-gold text-center text-[10px] leading-[1.3] font-bold tracking-[0.04em] text-white shadow-[0_8px_24px_rgba(245,158,11,0.45)] transition-all duration-300 ease-brand hover:scale-[1.12] hover:-translate-y-[3px] hover:shadow-[0_14px_32px_rgba(245,158,11,0.55)]"
+            className="flex size-16 flex-col items-center justify-center rounded-full bg-accent-grad text-center text-[10px] leading-[1.3] font-bold tracking-[0.04em] text-white shadow-[0_8px_24px_rgba(34,211,238,0.45)] transition-all duration-300 ease-brand hover:scale-[1.12] hover:-translate-y-[3px] hover:shadow-[0_14px_32px_rgba(34,211,238,0.55)]"
           >
             <svg viewBox="0 0 24 24" fill="none" className="mb-[2px] size-5">
               <path d="M3 5h18v14H3z" stroke="currentColor" strokeWidth="1.8" />

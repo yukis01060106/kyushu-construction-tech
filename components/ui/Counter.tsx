@@ -42,7 +42,7 @@ export function Counter({ target, duration = 2200 }: { target: number; duration?
   }, [target, duration]);
 
   return (
-    <span ref={ref} className="[text-shadow:0_0_30px_rgba(245,158,11,0.25)]">
+    <span ref={ref} className="[text-shadow:0_0_30px_rgba(34,211,238,0.25)]">
       {value}
     </span>
   );

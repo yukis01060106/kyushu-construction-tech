@@ -42,11 +42,11 @@ export function Header() {
     const active = pathname === href;
     return cn(
       'block rounded-sm px-[14px] py-2 text-sm font-medium transition-all duration-[250ms]',
-      'max-md:w-full max-md:px-4 max-md:py-[13px] max-md:text-gray-700 max-md:hover:bg-gray-50 max-md:hover:text-brand',
+      'max-lg:w-full max-lg:px-4 max-lg:py-[13px] max-lg:text-gray-700 max-lg:hover:bg-gray-50 max-lg:hover:text-brand',
       scrolled
         ? 'text-gray-700 hover:bg-gray-100 hover:text-brand'
         : 'text-white/88 hover:bg-white/12 hover:text-white',
-      active && 'bg-[#dbeafe] font-bold text-brand max-md:bg-[#dbeafe]',
+      active && 'bg-[#dbeafe] font-bold text-brand max-lg:bg-[#dbeafe]',
     );
   };
 
@@ -72,7 +72,7 @@ export function Header() {
           />
           <span
             className={cn(
-              'font-serif text-[17px] leading-none font-bold tracking-[0.04em] whitespace-nowrap transition-colors duration-[400ms] max-[380px]:text-[15px]',
+              'text-[17px] leading-none font-black tracking-[0.02em] whitespace-nowrap transition-colors duration-[400ms] max-[380px]:text-[15px]',
               scrolled ? 'text-navy-800' : 'text-white',
             )}
           >
@@ -82,11 +82,11 @@ export function Header() {
 
         <nav
           className={cn(
-            'max-md:fixed max-md:inset-x-0 max-md:top-[72px] max-md:z-[999] max-md:bg-white/98 max-md:shadow-lg max-md:backdrop-blur-[16px] max-md:transition-transform max-md:duration-[400ms] max-md:ease-brand',
-            open ? 'max-md:translate-y-0' : 'max-md:-translate-y-[calc(100%+80px)]',
+            'max-lg:fixed max-lg:inset-x-0 max-lg:top-[72px] max-lg:z-[999] max-lg:bg-white/98 max-lg:shadow-lg max-lg:backdrop-blur-[16px] max-lg:transition-transform max-lg:duration-[400ms] max-lg:ease-brand',
+            open ? 'max-lg:translate-y-0' : 'max-lg:-translate-y-[calc(100%+80px)]',
           )}
         >
-          <ul className="flex items-center gap-1 max-md:flex-col max-md:items-stretch max-md:gap-1 max-md:px-6 max-md:pt-5 max-md:pb-7">
+          <ul className="flex items-center gap-1 max-lg:flex-col max-lg:items-stretch max-lg:gap-1 max-lg:px-6 max-lg:pt-5 max-lg:pb-7">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className={navLinkClass(link.href)}>
@@ -97,7 +97,7 @@ export function Header() {
             <li>
               <Link
                 href="/contact/"
-                className="block rounded-sm bg-gold px-[14px] py-2 text-sm font-bold text-white transition-all duration-[250ms] hover:bg-gold-dark max-md:w-full max-md:px-4 max-md:py-[13px]"
+                className="block rounded-sm bg-accent-grad px-[14px] py-2 text-sm font-bold text-white transition-all duration-[250ms] hover:brightness-110 max-lg:w-full max-lg:px-4 max-lg:py-[13px]"
               >
                 お問い合わせ
               </Link>
@@ -107,7 +107,7 @@ export function Header() {
 
         <button
           type="button"
-          className="hidden cursor-pointer flex-col gap-[5px] border-none bg-transparent p-2 max-md:flex"
+          className="hidden cursor-pointer flex-col gap-[5px] border-none bg-transparent p-2 max-lg:flex"
           aria-label={open ? 'メニューを閉じる' : 'メニューを開く'}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
