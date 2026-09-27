@@ -8,7 +8,7 @@
 header('Content-Type: application/json; charset=UTF-8');
 
 /** 通知メールの宛先 */
-$to = 'info@rt-solutions.co.jp';
+$to = 'info@kyukentech.co.jp';
 
 /** JSON を返して終了する */
 function respond(int $code, array $payload): void {
